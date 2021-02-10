@@ -1,7 +1,7 @@
 {
   "name": "spring-doc-resources",
   "description": "Spring Documentation Resources",
-  "version": "0.2.0",
+  "version": "0.1.1",
   "repository": "https://github.com/spring-io/spring-doc-resources",
   "license": "Apache-2.0",
   "dependencies": {},
