@@ -6,11 +6,10 @@
   "license": "Apache-2.0",
   "dependencies": {},
   "devDependencies": {
-    "@asciidoctor/gulp-asciidoctor": "^2.2.5",
-    "gulp": "^4.0.2",
-    "gulp-connect": "^5.7.0",
-    "gulp-sass": "^4.1.0",
-    "node-sass": "^4.14.1"
+    "@asciidoctor/gulp-asciidoctor": "~2.2.5",
+    "gulp": "~4.0.2",
+    "gulp-connect": "~5.7.0",
+    "highlight.js": "10.6.0"
   },
   "scripts": {
     "build": "gulp",
