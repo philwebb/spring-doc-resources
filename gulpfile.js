@@ -32,7 +32,7 @@ const ASCIIDOC_ATTRIBUTES = [
     'docinfodir='.concat(process.cwd(), "/", paths.dist)
 ]
 
-function js() {
+function xjs() {
     return src('src/main/js/*.js', {read: false})
         .pipe(tap(function (file) {
             log.info('bundling ' + file.path);
@@ -42,7 +42,26 @@ function js() {
         .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(uglify())
         .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest('dest'));
+        .pipe(dest('dest'));
+}
+
+function js() {
+    return src('src/main/js/*.js', {read: false})
+        .pipe(tap(function (file) {
+            log.info('bundling ' + file.path);
+            file.contents = browserify(file.relative, {
+                basedir: 'src/main/js/', 
+                detectGlobals: false, 
+                debug: true
+            })
+            .plugin('browser-pack-flat/plugin')
+            .bundle();
+        }))
+        .pipe(buffer())
+//        .pipe(sourcemaps.init({loadMaps: true}))
+        .pipe(uglify())
+//        .pipe(sourcemaps.write('./'))
+        .pipe(dest('dest'));
 }
 
 function renderAsciidoctorExample() {
