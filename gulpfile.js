@@ -8,7 +8,7 @@ const log = require('gulplog');
 const tap = require('gulp-tap');
 const buffer = require('gulp-buffer');
 const sourcemaps = require('gulp-sourcemaps');
-const uglify = require('gulp-uglify');
+const terser = require('gulp-terser');
 
 const paths = {
     dist: 'build/dist/',
@@ -40,7 +40,7 @@ function xjs() {
         }))
         .pipe(buffer())
         .pipe(sourcemaps.init({loadMaps: true}))
-        .pipe(uglify())
+        .pipe(terser())
         .pipe(sourcemaps.write('./'))
         .pipe(dest('dest'));
 }
@@ -58,9 +58,9 @@ function js() {
             .bundle();
         }))
         .pipe(buffer())
-//        .pipe(sourcemaps.init({loadMaps: true}))
-        .pipe(uglify())
-//        .pipe(sourcemaps.write('./'))
+        .pipe(sourcemaps.init({loadMaps: true}))
+        .pipe(terser())
+        .pipe(sourcemaps.write('./'))
         .pipe(dest('dest'));
 }
 

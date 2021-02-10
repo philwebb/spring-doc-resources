@@ -13,7 +13,7 @@
     "gulp-connect": "5.7.0",
     "gulp-sourcemaps": "3.0.0",
     "gulp-tap": "2.0.0",
-    "gulp-uglify": "3.0.2",
+    "gulp-terser": "^2.0.1",
     "gulplog": "1.0.0",
     "highlight.js": "10.6.0"
   },
