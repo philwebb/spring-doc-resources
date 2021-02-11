@@ -4,6 +4,7 @@ const { src, dest, series, parallel, watch } = require('gulp');
 const asciidoctor = require('@asciidoctor/gulp-asciidoctor');
 const browserify = require('browserify');
 const connect = require('gulp-connect');
+const fs = require('fs-extra')
 const log = require('gulplog');
 const tap = require('gulp-tap');
 const buffer = require('gulp-buffer');
@@ -32,36 +33,27 @@ const ASCIIDOC_ATTRIBUTES = [
     'docinfodir='.concat(process.cwd(), "/", paths.dist)
 ]
 
-function xjs() {
-    return src('src/main/js/*.js', {read: false})
+function processJavascript() {
+    return src('src/main/js/*.js')
         .pipe(tap(function (file) {
-            log.info('bundling ' + file.path);
-            file.contents = browserify(file.path, {debug: true}).bundle();
+            if (file.relative.endsWith('.bundle.js')) {
+                log.info('Processing JS bundle ' + file.path);
+                file.contents = browserify(file.relative, {
+                    basedir: 'src/main/js/', 
+                    detectGlobals: false, 
+                    debug: true
+                })
+                .plugin('browser-pack-flat/plugin')
+                .bundle();
+            } else {
+                log.info('Processing JS source ' + file.path);
+            }
         }))
         .pipe(buffer())
         .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(terser())
         .pipe(sourcemaps.write('./'))
-        .pipe(dest('dest'));
-}
-
-function js() {
-    return src('src/main/js/*.js', {read: false})
-        .pipe(tap(function (file) {
-            log.info('bundling ' + file.path);
-            file.contents = browserify(file.relative, {
-                basedir: 'src/main/js/', 
-                detectGlobals: false, 
-                debug: true
-            })
-            .plugin('browser-pack-flat/plugin')
-            .bundle();
-        }))
-        .pipe(buffer())
-        .pipe(sourcemaps.init({loadMaps: true}))
-        .pipe(terser())
-        .pipe(sourcemaps.write('./'))
-        .pipe(dest('dest'));
+        .pipe(dest(paths.web));
 }
 
 function renderAsciidoctorExample() {
@@ -91,4 +83,4 @@ function watchFiles(cb) {
 const update = series(renderAsciidoctorExample);
 
 exports.dev = series(update, parallel(webServer, watchFiles));
-exports.js = js;
+exports.js = processJavascript;
