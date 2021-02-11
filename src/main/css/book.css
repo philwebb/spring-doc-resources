@@ -1,6 +1,9 @@
+/* Initially Hide the table of contenents */
 .book #toc {
   display: none;
 }
+
+/* Standard Asciidoctor styling based on https://gitlab.com/antora/antora-ui-default */
 
 .book #header,
 .book #content,
@@ -23,6 +26,11 @@
   }
 }
 
+#preamble + .sect1,
+.book .sect1 + .sect1 {
+  margin-top: 2rem;
+}
+
 .book h1,
 .book h2,
 .book h3,
@@ -34,6 +42,13 @@
   hyphens: none;
   line-height: 1.3;
   margin: 1rem 0 0;
+}
+
+.book h1.sect0 {
+  background: var(--book-abstract-background);
+  font-size: 1.8em;
+  margin: 1.5rem -1rem 0;
+  padding: 0.5rem 1rem;
 }
 
 .book h1:first-child {
@@ -48,474 +63,461 @@
   padding: 0.4rem 1rem 0.1rem;
 }
 
-.doc h3:not(.discrete) {
+.book h3:not(.discrete) {
   font-weight: var(--boot-alt-heading-font-weight);
 }
 
-/*
-
-
-.doc h1.sect0 {
-  background: var(--abstract-background);
-  font-size: 1.8em;
-  margin: 1.5rem -1rem 0;
-  padding: 0.5rem 1rem;
-}
-
-
-
-.doc h1 .anchor,
-.doc h2 .anchor,
-.doc h3 .anchor,
-.doc h4 .anchor,
-.doc h5 .anchor,
-.doc h6 .anchor {
+.book h1 .anchor,
+.book h2 .anchor,
+.book h3 .anchor,
+.book h4 .anchor,
+.book h5 .anchor,
+.book h6 .anchor {
   position: absolute;
   text-decoration: none;
   width: 1.75ex;
   margin-left: -1.5ex;
   visibility: hidden;
-  font-size: 0.8em;
   font-weight: normal;
-  padding-top: 0.05em;
 }
 
-.doc h1 .anchor::before,
-.doc h2 .anchor::before,
-.doc h3 .anchor::before,
-.doc h4 .anchor::before,
-.doc h5 .anchor::before,
-.doc h6 .anchor::before {
-  content: "\00a7";
+.book h1 .anchor::before,
+.book h2 .anchor::before,
+.book h3 .anchor::before,
+.book h4 .anchor::before,
+.book h5 .anchor::before,
+.book h6 .anchor::before {
+  content: "\0023";
 }
 
-.doc h1:hover .anchor,
-.doc h2:hover .anchor,
-.doc h3:hover .anchor,
-.doc h4:hover .anchor,
-.doc h5:hover .anchor,
-.doc h6:hover .anchor {
+.book h1:hover .anchor,
+.book h2:hover .anchor,
+.book h3:hover .anchor,
+.book h4:hover .anchor,
+.book h5:hover .anchor,
+.book h6:hover .anchor {
   visibility: visible;
 }
 
-.doc p,
-.doc dl {
+.book p,
+.book dl {
   margin: 0;
 }
 
-.doc a {
-  color: var(--link-font-color);
-}
-
-.doc a:hover {
-  color: var(--link_hover-font-color);
-}
-
-.doc a.bare {
+.book a.bare {
   hyphens: none;
 }
 
-.doc a.unresolved {
-  color: var(--link_unresolved-font-color);
+.book a {
+  color: var(--book-link-font-color);
 }
 
-.doc i.fa {
+.book a:hover {
+  color: var(--book-hover-link-font-color);
+}
+
+.book a.unresolved {
+  color: var(--book-unresolved-link-font-color);
+}
+
+.book i.fa {
   hyphens: none;
   font-style: normal;
 }
 
-.doc p code,
-.doc thead code {
-  color: var(--code-font-color);
-  background: var(--code-background);
+.book p code,
+.book thead code {
+  color: var(--book-code-font-color);
+  background: var(--book-code-background);
   border-radius: 0.25em;
   font-size: 0.95em;
   padding: 0.125em 0.25em;
 }
 
-.doc code,
-.doc pre {
+.book code,
+.book pre {
   hyphens: none;
 }
 
-.doc pre {
-  font-size: calc(16 / var(--rem-base) * 1rem);
-  line-height: 1.5;
+.book pre {
+  font-size: calc(16 / var(--pixel-to-rem));
+  line-height: 1.3;
   margin: 0;
 }
 
-.doc blockquote {
+.book blockquote {
   margin: 0;
 }
 
-.doc .paragraph.lead > p {
-  font-size: calc(18 / var(--rem-base) * 1rem);
+.book .paragraph.lead > p {
+  font-size: calc(18 / var(--pixel-to-rem));
 }
 
-.doc .right {
+.book .right {
   float: right;
 }
 
-.doc .left {
+.book .left {
   float: left;
 }
 
-.doc .stretch {
+.book .stretch {
   width: 100%;
 }
 
-.doc .underline {
+.book .underline {
   text-decoration: underline;
 }
 
-.doc .line-through {
+.book .line-through {
   text-decoration: line-through;
 }
 
-.doc .paragraph,
-.doc .dlist,
-.doc .hdlist,
-.doc .olist,
-.doc .ulist,
-.doc .exampleblock,
-.doc .imageblock,
-.doc .listingblock,
-.doc .literalblock,
-.doc .sidebarblock,
-.doc .verseblock,
-.doc .quoteblock,
-.doc .partintro,
-.doc details,
-.doc hr {
+.book .paragraph,
+.book .dlist,
+.book .hdlist,
+.book .olist,
+.book .ulist,
+.book .exampleblock,
+.book .imageblock,
+.book .listingblock,
+.book .literalblock,
+.book .sidebarblock,
+.book .verseblock,
+.book .quoteblock,
+.book .partintro,
+.book details,
+.book hr {
   margin: 1rem 0 0;
 }
 
-.doc table.tableblock {
-  font-size: calc(15 / var(--rem-base) * 1rem);
+.book table.tableblock {
+  font-size: calc(15 / var(--pixel-to-rem));
   margin: 1.5rem 0 0;
 }
 
-.doc table.tableblock + * {
+.book table.tableblock + * {
   margin-top: 1.5rem;
 }
 
-.doc td.tableblock > .content > :first-child {
+.book td.tableblock > .content > :first-child {
   margin-top: 0;
 }
 
-.doc table.tableblock th,
-.doc table.tableblock td {
+.book table.tableblock th,
+.book table.tableblock td {
   padding: 0.5rem;
 }
 
-.doc table.tableblock thead th {
-  border-bottom: 2.5px solid var(--table-border-color);
+.book table.tableblock thead th {
+  border-bottom: 2.5px solid var(--book-table-border-color);
 }
 
-.doc table.tableblock td,
-.doc table.tableblock > :not(thead) th {
-  border-top: 1px solid var(--table-border-color);
-  border-bottom: 1px solid var(--table-border-color);
+.book table.tableblock td,
+.book table.tableblock > :not(thead) th {
+  border-top: 1px solid var(--book-table-border-color);
+  border-bottom: 1px solid var(--book-table-border-color);
 }
 
-.doc table.stripes-all > tbody > tr,
-.doc table.stripes-odd > tbody > tr:nth-of-type(odd),
-.doc table.stripes-even > tbody > tr:nth-of-type(even),
-.doc table.stripes-hover > tbody > tr:hover {
-  background: var(--table-stripe-background);
+.book table.stripes-all > tbody > tr,
+.book table.stripes-odd > tbody > tr:nth-of-type(odd),
+.book table.stripes-even > tbody > tr:nth-of-type(even),
+.book table.stripes-hover > tbody > tr:hover {
+  background: var(--book-table-stripe-background);
 }
 
-.doc table.tableblock > tfoot {
-  background: var(--table-footer-background);
+.book table.tableblock > tfoot {
+  background: var(--book-table-footer-background);
 }
 
-.doc .halign-left {
+.book .halign-left {
   text-align: left;
 }
 
-.doc .halign-right {
+.book .halign-right {
   text-align: right;
 }
 
-.doc .halign-center {
+.book .halign-center {
   text-align: center;
 }
 
-.doc .valign-top {
+.book .valign-top {
   vertical-align: top;
 }
 
-.doc .valign-bottom {
+.book .valign-bottom {
   vertical-align: bottom;
 }
 
-.doc .valign-middle {
+.book .valign-middle {
   vertical-align: middle;
 }
 
-.doc .admonitionblock {
+.book .admonitionblock {
   margin: 1.4rem 0 0;
 }
 
-.doc .admonitionblock p,
-.doc .admonitionblock td.content {
-  font-size: calc(16 / var(--rem-base) * 1rem);
+.book .admonitionblock p,
+.book .admonitionblock td.content {
+  font-size: calc(16 / var(--pixel-to-rem));
 }
 
-.doc .admonitionblock td.content > :not(.title):first-child,
-.doc .admonitionblock td.content > .title + * {
+.book .admonitionblock td.content > :not(.title):first-child,
+.book .admonitionblock td.content > .title + * {
   margin-top: 0;
 }
 
-.doc .admonitionblock pre {
-  font-size: calc(15 / var(--rem-base) * 1rem);
+.book .admonitionblock pre {
+  font-size: calc(15 / var(--pixel-to-rem));
 }
 
-.doc .admonitionblock > table {
+.book .admonitionblock > table {
   table-layout: fixed;
   position: relative;
   width: 100%;
 }
 
-.doc .admonitionblock td.content {
+.book .admonitionblock td.content {
   padding: 1rem 1rem 0.75rem;
-  background: var(--admonition-background);
+  background: var(--book-admonition-background);
   width: 100%;
   word-wrap: anywhere;
 }
 
-.doc .admonitionblock .icon {
+.book .admonitionblock .icon {
   position: absolute;
   top: 0;
   left: 0;
-  font-size: calc(15 / var(--rem-base) * 1rem);
+  font-size: calc(15 / var(--pixel-to-rem));
   padding: 0 0.5rem;
   height: 1.25rem;
   line-height: 1;
-  font-weight: var(--admonition-label-font-weight);
+  font-weight: var(--book-admonition-label-font-weight);
   text-transform: uppercase;
   border-radius: 0.45rem;
   transform: translate(-0.5rem, -50%);
 }
 
-.doc .admonitionblock.caution .icon {
-  background-color: var(--caution-color);
+.book .admonitionblock.caution .icon {
+  background-color: var(--book-caution-color);
   color: var(--caution-on-color);
 }
 
-.doc .admonitionblock.important .icon {
-  background-color: var(--important-color);
-  color: var(--important-on-color);
+.book .admonitionblock.important .icon {
+  background-color: var(--book-important-color);
+  color: var(--book-important-on-color);
 }
 
-.doc .admonitionblock.note .icon {
-  background-color: var(--note-color);
-  color: var(--note-on-color);
+.book .admonitionblock.note .icon {
+  background-color: var(--book-note-color);
+  color: var(--book-note-on-color);
 }
 
-.doc .admonitionblock.tip .icon {
-  background-color: var(--tip-color);
-  color: var(--tip-on-color);
+.book .admonitionblock.tip .icon {
+  background-color: var(--book-tip-color);
+  color: var(--book-tip-on-color);
 }
 
-.doc .admonitionblock.warning .icon {
-  background-color: var(--warning-color);
-  color: var(--warning-on-color);
+.book .admonitionblock.warning .icon {
+  background-color: var(--book-warning-color);
+  color: var(--book-warning-on-color);
 }
 
-.doc .admonitionblock .icon i {
+.book .admonitionblock .icon i {
   display: inline-flex;
   align-items: center;
   height: 100%;
 }
 
-.doc .admonitionblock .icon i::after {
+.book .admonitionblock .icon i::after {
   content: attr(title);
 }
 
-.doc .imageblock {
+.book .imageblock {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.doc .imageblock img,
-.doc .image > img {
+.book .imageblock img,
+.book .image > img {
   display: inline-block;
   height: auto;
   max-width: 100%;
   vertical-align: middle;
 }
 
-.doc .image:not(.left):not(.right) > img {
+.book .image:not(.left):not(.right) > img {
   margin-top: -0.2em;
 }
 
-#preamble .abstract blockquote {
-  background: var(--abstract-background);
-  border-left: 5px solid var(--abstract-border-color);
-  color: var(--abstract-font-color);
-  font-size: calc(16 / var(--rem-base) * 1rem);
+.book #preamble .abstract blockquote {
+  background: var(--book-abstract-background);
+  border-left: 5px solid var(--book-abstract-border-color);
+  color: var(--book-abstract-font-color);
+  font-size: calc(16 / var(--pixel-to-rem));
   padding: 0.75em 1em;
 }
 
-.doc .quoteblock,
-.doc .verseblock {
-  background: var(--quote-background);
+.book .quoteblock,
+.book .verseblock {
+  background: var(--book-quote-background);
   border-left: 5px solid var(--quote-border-color);
   color: var(--quote-font-color);
 }
 
-.doc .quoteblock {
+.book .quoteblock {
   padding: 0.25rem 2rem 1.25rem;
 }
 
-.doc .quoteblock .attribution {
-  color: var(--quote-attribution-font-color);
-  font-size: calc(15 / var(--rem-base) * 1rem);
+.book .quoteblock .attribution {
+  color: var(--book-quote-attribution-font-color);
+  font-size: calc(15 / var(--pixel-to-rem));
   margin-top: 0.75rem;
 }
 
-.doc .quoteblock blockquote {
+.book .quoteblock blockquote {
   margin-top: 1rem;
 }
 
-.doc .quoteblock .paragraph {
+.book .quoteblock .paragraph {
   font-style: italic;
 }
 
-.doc .quoteblock cite {
+.book .quoteblock cite {
   padding-left: 1em;
 }
 
-.doc .verseblock {
+.book .verseblock {
   font-size: 1.15em;
   padding: 1rem 2rem;
 }
 
-.doc .verseblock pre {
+.book .verseblock pre {
   font-family: inherit;
   font-size: inherit;
 }
 
-.doc ol,
-.doc ul {
+
+.book ol,
+.book ul {
   margin: 0;
   padding: 0 0 0 2rem;
 }
 
-.doc ul.checklist,
-.doc ul.none,
-.doc ol.none,
-.doc ul.no-bullet,
-.doc ol.unnumbered,
-.doc ul.unstyled,
-.doc ol.unstyled {
+.book ul.checklist,
+.book ul.none,
+.book ol.none,
+.book ul.no-bullet,
+.book ol.unnumbered,
+.book ul.unstyled,
+.book ol.unstyled {
   list-style-type: none;
 }
 
-.doc ul.no-bullet,
-.doc ol.unnumbered {
+.book ul.no-bullet,
+.book ol.unnumbered {
   padding-left: 1.25rem;
 }
 
-.doc ul.unstyled,
-.doc ol.unstyled {
+.book ul.unstyled,
+.book ol.unstyled {
   padding-left: 0;
 }
 
-.doc ul.circle {
+.book ul.circle {
   list-style-type: square;
 }
 
-.doc ul.disc {
+.book ul.disc {
   list-style-type: square;
 }
 
-.doc ul.square {
+.book ul.square {
   list-style-type: square;
 }
 
-.doc ol.arabic {
+.book ol.arabic {
   list-style-type: decimal;
 }
 
-.doc ol.decimal {
+.book ol.decimal {
   list-style-type: decimal-leading-zero;
 }
 
-.doc ol.loweralpha {
+.book ol.loweralpha {
   list-style-type: lower-alpha;
 }
 
-.doc ol.upperalpha {
+.book ol.upperalpha {
   list-style-type: upper-alpha;
 }
 
-.doc ol.lowerroman {
+.book ol.lowerroman {
   list-style-type: lower-roman;
 }
 
-.doc ol.upperroman {
+.book ol.upperroman {
   list-style-type: upper-roman;
 }
 
-.doc ol.lowergreek {
+.book ol.lowergreek {
   list-style-type: lower-greek;
 }
 
-.doc ul.checklist {
+.book ul.checklist {
   padding-left: 0.5rem;
 }
 
-.doc ul.checklist p > i.fa-check-square-o:first-child,
-.doc ul.checklist p > i.fa-square-o:first-child {
+.book ul.checklist p > i.fa-check-square-o:first-child,
+.book ul.checklist p > i.fa-square-o:first-child {
   display: inline-flex;
   justify-content: center;
   width: 1.25rem;
 }
 
-.doc ul.checklist i.fa-check-square-o::before {
+.book ul.checklist i.fa-check-square-o::before {
   content: "\2713";
 }
 
-.doc ul.checklist i.fa-square-o::before {
+.book ul.checklist i.fa-square-o::before {
   content: "\274f";
 }
 
-.doc .dlist .dlist,
-.doc .dlist .olist,
-.doc .dlist .ulist,
-.doc .olist .dlist,
-.doc .olist .olist,
-.doc .olist .ulist,
-.doc .ulist .dlist,
-.doc .ulist .olist,
-.doc .ulist .ulist {
+.book .dlist .dlist,
+.book .dlist .olist,
+.book .dlist .ulist,
+.book .olist .dlist,
+.book .olist .olist,
+.book .olist .ulist,
+.book .ulist .dlist,
+.book .ulist .olist,
+.book .ulist .ulist {
   margin-top: 0.5rem;
 }
 
-.doc .olist li,
-.doc .ulist li {
+.book .olist li,
+.book .ulist li {
   margin-bottom: 0.5rem;
 }
 
-.doc .ulist .listingblock,
-.doc .olist .listingblock,
-.doc .admonitionblock .listingblock {
+.book .ulist .listingblock,
+.book .olist .listingblock,
+.book .admonitionblock .listingblock {
   padding: 0;
 }
 
-.doc .admonitionblock .title,
-.doc .exampleblock .title,
-.doc .imageblock .title,
-.doc .literalblock .title,
-.doc .listingblock .title,
-.doc .openblock .title,
-.doc .tableblock caption {
-  color: var(--caption-font-color);
-  font-size: calc(16 / var(--rem-base) * 1rem);
-  font-weight: var(--caption-font-weight);
+.book .admonitionblock .title,
+.book .exampleblock .title,
+.book .imageblock .title,
+.book .literalblock .title,
+.book .listingblock .title,
+.book .openblock .title,
+.book .tableblock caption {
+  color: var(--book-caption-font-color);
+  font-size: calc(16 / var(--pixel-to-rem));
+  font-weight: var(--book-caption-font-weight);
   font-style: italic;
   hyphens: none;
   letter-spacing: 0.01em;
@@ -523,208 +525,118 @@
   text-align: left;
 }
 
-.doc .imageblock .title {
+.book .imageblock .title {
   margin-top: 0.5rem;
   padding-bottom: 0;
 }
 
-.doc .exampleblock > .content {
-  background: var(--example-background);
-  border: 0.25rem solid var(--example-border-color);
+.book .exampleblock > .content {
+  background: var(--book-example-background);
+  border: 0.25rem solid var(--book-example-border-color);
   border-radius: 0.5rem;
   padding: 0.75rem;
 }
 
-.doc .exampleblock > .content > :first-child {
+.book .exampleblock > .content > :first-child {
   margin-top: 0;
 }
 
-.doc .sidebarblock {
-  background: var(--sidebar-background);
+.book .sidebarblock {
+  background: var(--book-sidebar-background);
   border-radius: 0.75rem;
   padding: 0.75rem 1.5rem;
 }
 
-.doc .sidebarblock > .content > .title {
-  font-size: calc(22.5 / var(--rem-base) * 1rem);
-  font-weight: var(--alt-heading-font-weight);
+.book .sidebarblock > .content > .title {
+  font-size: calc(22.5 / var(--pixel-to-rem));
+  font-weight: var(--book-alt-heading-font-weight);
   line-height: 1.3;
   margin-bottom: -0.3em;
   text-align: center;
 }
 
-.doc .sidebarblock > .content > :not(.title):first-child {
+.book .sidebarblock > .content > :not(.title):first-child {
   margin-top: 0;
 }
 
-// NEEDS REVIEW prevent pre in table from causing article to exceed bounds 
-.doc .tableblock pre,
-.doc .listingblock.wrap pre {
+/* NEEDS REVIEW prevent pre in table from causing article to exceed bounds */
+.book .tableblock pre,
+.book .listingblock.wrap pre {
   white-space: pre-wrap;
 }
 
-.doc pre.highlight code,
-.doc .listingblock pre:not(.highlight),
-.doc .literalblock pre {
-  background: var(--pre-background);
-  box-shadow: inset 0 0 1.75px var(--pre-border-color);
+.book pre.highlight code,
+.book .listingblock pre:not(.highlight),
+.book .literalblock pre {
+  background: var(--book-pre-background);
+  box-shadow: inset 0 0 1.75px var(--book-pre-border-color);
   display: block;
   overflow-x: auto;
   padding: 0.75rem;
 }
 
-.doc pre.highlight {
+.book pre.highlight {
   position: relative;
 }
 
-.doc .source-toolbox {
-  display: flex;
-  visibility: hidden;
-  position: absolute;
-  top: 0.25rem;
-  right: 0.5rem;
-  color: var(--pre-annotation-font-color);
-  font-family: var(--body-font-family);
-  font-size: calc(13.5 / var(--rem-base) * 1rem);
-  line-height: 1;
-}
-
-.doc .listingblock:hover .source-toolbox {
-  visibility: visible;
-}
-
-.doc .source-toolbox .source-lang {
-  text-transform: uppercase;
-  letter-spacing: 0.075em;
-  font-size: 0.96em;
-  line-height: 1.0425;
-}
-
-.doc .source-toolbox > :not(:last-child)::after {
-  content: "|";
-  letter-spacing: 0;
-  padding: 0 1ch;
-}
-
-.doc .source-toolbox .copy-button {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: transparent;
-  border: none;
-  color: inherit;
-  outline: none;
-  padding: 0;
-  font-size: inherit;
-  line-height: inherit;
-  width: 1em;
-  height: 1em;
-}
-
-.doc .source-toolbox .copy-icon {
-  flex: none;
-  width: inherit;
-  height: inherit;
-}
-
-.doc .source-toolbox img.copy-icon {
-  filter: invert(50.2%);
-}
-
-.doc .source-toolbox svg.copy-icon {
-  fill: currentColor;
-}
-
-.doc .source-toolbox .copy-toast {
-  flex: none;
-  position: relative;
-  display: inline-flex;
-  justify-content: center;
-  margin-top: 1em;
-  background-color: var(--doc-font-color);
-  border-radius: 0.25em;
-  padding: 0.5em;
-  color: var(--color-white);
-  cursor: auto;
-  opacity: 0;
-  transition: opacity 0.5s ease 0.75s;
-}
-
-.doc .source-toolbox .copy-toast::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 1em;
-  height: 1em;
-  border: 0.55em solid transparent;
-  border-left-color: var(--doc-font-color);
-  transform: rotate(-90deg) translateX(50%) translateY(50%);
-  transform-origin: left;
-}
-
-.doc .source-toolbox .copy-button.clicked .copy-toast {
-  opacity: 1;
-  transition: none;
-}
-
-.doc .language-console .hljs-meta {
+.book .language-console .hljs-meta {
   user-select: none;
 }
 
-.doc .dlist dt {
+.book .dlist dt {
   font-style: italic;
 }
 
-.doc .dlist dd {
+.book .dlist dd {
   margin: 0 0 0.25rem 1.5rem;
 }
 
-.doc .dlist dd:last-of-type {
+.book .dlist dd:last-of-type {
   margin-bottom: 0;
 }
 
-.doc td.hdlist1,
-.doc td.hdlist2 {
+.book td.hdlist1,
+.book td.hdlist2 {
   padding: 0.5rem 0 0;
   vertical-align: top;
 }
 
-.doc tr:first-child > .hdlist1,
-.doc tr:first-child > .hdlist2 {
+.book tr:first-child > .hdlist1,
+.book tr:first-child > .hdlist2 {
   padding-top: 0;
 }
 
-.doc td.hdlist1 {
+.book td.hdlist1 {
   font-weight: var(--body-font-weight-bold);
   padding-right: 0.25rem;
 }
 
-.doc td.hdlist2 {
+.book td.hdlist2 {
   padding-left: 0.25rem;
 }
 
-.doc .colist {
-  font-size: calc(16 / var(--rem-base) * 1rem);
+.book .colist {
+  font-size: calc(16 / var(--pixel-to-rem));
   margin: 0.25rem 0 -0.25rem;
 }
 
-.doc .colist > table > tr > :first-child,
-.doc .colist > table > tbody > tr > :first-child {
+.book .colist > table > tr > :first-child,
+.book .colist > table > tbody > tr > :first-child {
   padding: 0.25em 0.5rem 0;
   vertical-align: top;
 }
 
-.doc .colist > table > tr > :last-child,
-.doc .colist > table > tbody > tr > :last-child {
+.book .colist > table > tr > :last-child,
+.book .colist > table > tbody > tr > :last-child {
   padding: 0.25rem 0;
 }
 
-.doc .conum[data-value] {
+.book .conum[data-value] {
   border: 1px solid currentColor;
   border-radius: 100%;
   display: inline-block;
-  font-family: var(--body-font-family);
-  font-size: calc(13.5 / var(--rem-base) * 1rem);
+  font-family: var(--book-body-font-family);
+  font-size: calc(13.5 / var(--pixel-to-rem));
   font-style: normal;
   line-height: 1.2;
   text-align: center;
@@ -734,99 +646,84 @@
   text-indent: -0.25ex;
 }
 
-.doc .conum[data-value]::after {
+.book .conum[data-value]::after {
   content: attr(data-value);
 }
 
-.doc .conum[data-value] + b {
+.book .conum[data-value] + b {
   display: none;
 }
 
-.doc hr {
-  border: solid var(--section-divider-color);
+.book hr {
+  border: solid var(--book-section-divider-color);
   border-width: 2px 0 0;
   height: 0;
 }
 
-.doc b.button {
-  white-space: nowrap; // effectively ignores hyphens setting 
+.book b.button {
+  white-space: nowrap;
 }
 
-.doc b.button::before {
+.book b.button::before {
   content: "[";
   padding-right: 0.25em;
 }
 
-.doc b.button::after {
+.book b.button::after {
   content: "]";
   padding-left: 0.25em;
 }
 
-.doc kbd {
+.book kbd {
   display: inline-block;
-  font-size: calc(12 / var(--rem-base) * 1rem);
-  background: var(--kbd-background);
-  border: 1px solid var(--kbd-border-color);
+  font-size: calc(12 / var(--pixel-to-rem));
+  background: var(--book-kbd-background);
+  border: 1px solid var(--book-kbd-border-color);
   border-radius: 0.25em;
-  box-shadow: 0 1px 0 var(--kbd-border-color), 0 0 0 0.1em var(--body-background) inset;
+  box-shadow: 0 1px 0 var(--book-kbd-border-color), 0 0 0 0.1em var(--body-background) inset;
   padding: 0.25em 0.5em;
   vertical-align: text-bottom;
-  white-space: nowrap; // effectively ignores hyphens setting 
+  white-space: nowrap; 
 }
 
-.doc kbd,
-.doc .keyseq {
+.book kbd,
+.book .keyseq {
   line-height: 1;
 }
 
-.doc .keyseq {
-  font-size: calc(16 / var(--rem-base) * 1rem);
+.book .keyseq {
+  font-size: calc(16 / var(--pixel-to-rem));
 }
 
-.doc .keyseq kbd {
+.book .keyseq kbd {
   margin: 0 0.125em;
 }
 
-.doc .keyseq kbd:first-child {
+.book .keyseq kbd:first-child {
   margin-left: 0;
 }
 
-.doc .keyseq kbd:last-child {
+.book .keyseq kbd:last-child {
   margin-right: 0;
 }
 
-.doc .menuseq,
-.doc .path {
+.book .menuseq,
+.book .path {
   hyphens: none;
 }
 
-.doc .menuseq i.caret::before {
+.book .menuseq i.caret::before {
   content: "\203a";
   font-size: 1.1em;
-  font-weight: var(--body-font-weight-bold);
+  font-weight: var(--book-body-font-weight-bold);
   line-height: calc(1 / 1.1);
 }
 
-.doc .nowrap {
+.book .nowrap {
   white-space: nowrap;
 }
 
-.doc .nobreak {
+.book .nobreak {
   hyphens: none;
   word-wrap: normal;
 }
-
-
-@media screen and (min-width: 769px) {
-  .doc > h1.page:first-child {
-    margin-top: 2.5rem;
-  }
-}
-
-#preamble + .sect1,
-.doc .sect1 + .sect1 {
-  margin-top: 2rem;
-}
-
-
-  */

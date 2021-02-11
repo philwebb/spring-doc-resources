@@ -17,7 +17,33 @@
   --book-heading-font-weight: bold;
   --book-alt-heading-font-weight: 500;
   --book-section-divider-color: red;
-
+  --book-link-font-color: red;
+  --book-hover-link-font-color: red;
+  --book-unresolved-link-font-color: red;
+  --book-code-font-color: blue;
+  --book-code-background: silver;
+  --book-table-border-color: red;
+  --book-table-stripe-background: silver;  
+  --book-table-footer-background: green;
+  --book-admonition-background: red;
+  --book-admonition-label-font-weight: normal;
+  --book-caution-color: red;
+  --book-important-color: red;
+  --book-note-color: red;
+  --book-tip-color: red;
+  --book-warning-color: red;
+  --book-warning-on-color: red;
+  --book-abstract-background: red;
+  --book-abstract-border-color: red;
+  --book-abstract-font-color: red;
+  --book-quote-background: red;
+  --book-quote-attribution-font-color: red;
+  --book-caption-font-color: red;
+  --book-caption-font-weight: normal;
+  --book-example-background: red;
+  --book-example-border-color: red;
+  --book-sidebar-background: red;
+  
   --highlight-background-color: #f8f8f8;
   --highlight-font-color: #333;
   --highlight-comment-font-color: #998;
