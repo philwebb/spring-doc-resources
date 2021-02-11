@@ -83,7 +83,7 @@ function watchFiles(cb) {
     cb();
 }
 
-const update = series(addResources, renderAsciidoctorExample);
+const update = series(addResources, addHighlightjsJavascript, addSiteCss, renderAsciidoctorExample);
 
 exports.ad = update
 exports.dev = series(update, parallel(webServer, watchFiles));
