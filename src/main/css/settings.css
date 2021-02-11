@@ -1,34 +1,36 @@
 :root {
+  --body-font-color: black;
+  --scrollbar-thumb-color: silver;
 
-    --body-font-color: black;
-    --scrollbar-thumb-color: silver;
+  --html-font-size: 1.0625em; /* 17px */
+  --html-desktop-font-size: 1.125em; /* 18px */
+  --html-print-font-size: 0.9375em; /* 15px */
 
-    --html-font-size: 1.0625em; /* 17px */
-    --html-desktop-font-size: 1.125em; /* 18px */
-    --html-print-font-size: 0.9375em; /* 15px */
+  --pixel-to-rem: 18 * 1rem;
 
-    --pixel-to-rem: 18 * 1rem;
+  --book-font-color: black;
+  --book-margin: 0 auto;
+  --book-desktop-margin: 0 2rem;
+  --book-max-width: calc(720 / var(--pixel-to-rem));
+  --book-desktop-max-width: calc(828 / var(--pixel-to-rem));
+  --book-heading-font-color: black;
+  --book-heading-font-weight: bold;
+  --book-alt-heading-font-weight: 500;
+  --book-section-divider-color: red;
 
-    --book-font-color: black;
-    --book-margin: 0 auto;
-    --book-desktop-margin: 0 2rem;
-    --book-max-width: calc(720 / var(--pixel-to-rem));
-    --book-desktop-max-width: calc(828 / var(--pixel-to-rem));
-
-    --highlight-background-color: #f8f8f8;
-    --highlight-font-color: #333;
-    --highlight-comment-font-color: #998;
-    --highlight-keyword-font-color: var(--highlight-font-color);
-    --highlight-variable-font-color: #008080;
-    --highlight-string-font-color: #d14;
-    --highlight-title-font-color: #900;
-    --highlight-type-font-color: #458;
-    --highlight-name-font-color: #000080;
-    --highlight-link-font-color: #009926;
-    --highlight-symbol-font-color: #990073;
-    --highlight-builtin-font-color: #0086b3;
-    --highlight-meta-font-color: #999;
-    --highlight-deletion-font-color: #fdd;
-    --highlight-addition-font-color: #dfd;
+  --highlight-background-color: #f8f8f8;
+  --highlight-font-color: #333;
+  --highlight-comment-font-color: #998;
+  --highlight-keyword-font-color: var(--highlight-font-color);
+  --highlight-variable-font-color: #008080;
+  --highlight-string-font-color: #d14;
+  --highlight-title-font-color: #900;
+  --highlight-type-font-color: #458;
+  --highlight-name-font-color: #000080;
+  --highlight-link-font-color: #009926;
+  --highlight-symbol-font-color: #990073;
+  --highlight-builtin-font-color: #0086b3;
+  --highlight-meta-font-color: #999;
+  --highlight-deletion-font-color: #fdd;
+  --highlight-addition-font-color: #dfd;
 }
-

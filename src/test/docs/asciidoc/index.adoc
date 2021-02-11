@@ -201,6 +201,11 @@ Empowers developers to easily create real, automated tests.
 |A cli for your `shell` that's great.
 |===
 
+[discrete]
+== Discrete Section
+This section won't be in the ToC.
+It's on its own.
+
 == Edge cases
 
 A table with long entries and no breakable space.
@@ -235,3 +240,5 @@ A shell code block
 2019-04-01 13:09:56.912  INFO 41370 --- [           main] .t.TomcatServletWebServerFactory : Server initialized with port: 8080
 2019-04-01 13:09:57.501  INFO 41370 --- [           main] o.s.b.s.app.SampleApplication            : Started SampleApplication in 2.992 seconds (JVM running for 3.658)
 ----
+
+
