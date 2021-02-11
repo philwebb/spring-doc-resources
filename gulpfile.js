@@ -25,13 +25,11 @@ const ASCIIDOC_ATTRIBUTES = [
     'docinfo',
     'sectanchors',
     'sectnums',
-    'source-highlighter=highlight.js',
-    'highlightjsdir=js',
     'stylesdir=css',
     'stylesheet=spring.css',
     'docinfo=shared',
     'linkcss',
-    'docinfodir='.concat(process.cwd(), "/", paths.dist)
+    'docinfodir='.concat(process.cwd(), '/build/dist')
 ]
 
 function addHighlightjsJavascript() {
@@ -47,13 +45,18 @@ function addHighlightjsJavascript() {
         .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(terser())
         .pipe(sourcemaps.write('./'))
-        .pipe(dest(paths.web + "/js"));
+        .pipe(dest('build/web/js'));
 }
 
 function addSiteCss() {
     return src('src/main/css/spring.css', {sourcemaps})
         .pipe(postcss())
-        .pipe(dest(paths.web + "/css"));
+        .pipe(dest('build/web/css'));
+}
+
+function addResources() {
+    return src('src/main/docinfo/*')
+        .pipe(dest('build/dist'));
 }
 
 function renderAsciidoctorExample() {
@@ -63,7 +66,7 @@ function renderAsciidoctorExample() {
             doctype: 'book', 
             attributes: ASCIIDOC_ATTRIBUTES
         }))
-        .pipe(dest(paths.web))
+        .pipe(dest('build/web'))
         .pipe(connect.reload());
 }
 
@@ -80,7 +83,8 @@ function watchFiles(cb) {
     cb();
 }
 
-const update = series(renderAsciidoctorExample);
+const update = series(addResources, renderAsciidoctorExample);
 
+exports.ad = update
 exports.dev = series(update, parallel(webServer, watchFiles));
 exports.js = series(addHighlightjsJavascript, addSiteCss);
