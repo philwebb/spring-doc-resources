@@ -2,13 +2,14 @@
 
 const { src, dest, series, parallel, watch } = require('gulp');
 const asciidoctor = require('@asciidoctor/gulp-asciidoctor');
+const buffer = require('gulp-buffer');
 const browserify = require('browserify');
 const connect = require('gulp-connect');
 const fs = require('fs-extra')
 const log = require('gulplog');
-const tap = require('gulp-tap');
-const buffer = require('gulp-buffer');
+const rename = require("gulp-rename");
 const sourcemaps = require('gulp-sourcemaps');
+const tap = require('gulp-tap');
 const terser = require('gulp-terser');
 
 const paths = {
@@ -24,8 +25,7 @@ const ASCIIDOC_ATTRIBUTES = [
     'sectanchors',
     'sectnums',
     'source-highlighter=highlight.js',
-    'highlightjsdir=js/highlight',
-    'highlightjs-theme=github',
+    'highlightjsdir=js',
     'stylesdir=css',
     'stylesheet=spring.css',
     'docinfo=shared',
@@ -33,8 +33,24 @@ const ASCIIDOC_ATTRIBUTES = [
     'docinfodir='.concat(process.cwd(), "/", paths.dist)
 ]
 
-function processJavascript() {
-    return src('src/main/js/*.js')
+function addHighlightjsJavascript() {
+    return src('src/main/js/highlight.bundle.js', {read: false})
+        .pipe(tap(function (file) {
+            log.info('Processing highligh.js bundle ' + file.path);
+            file.contents = browserify(file.path, {debug: true})
+                .plugin('browser-pack-flat/plugin')
+                .bundle();
+        }))
+        .pipe(rename('highlight.min.js'))
+        .pipe(buffer())
+        .pipe(sourcemaps.init({loadMaps: true}))
+        .pipe(terser())
+        .pipe(sourcemaps.write('./'))
+        .pipe(dest(paths.web + "/js"));
+}
+
+function processJavascriptx() {
+    return src('src/main/js/*.js', {read: false})
         .pipe(tap(function (file) {
             if (file.relative.endsWith('.bundle.js')) {
                 log.info('Processing JS bundle ' + file.path);
@@ -50,9 +66,9 @@ function processJavascript() {
             }
         }))
         .pipe(buffer())
-        .pipe(sourcemaps.init({loadMaps: true}))
-        .pipe(terser())
-        .pipe(sourcemaps.write('./'))
+        //.pipe(sourcemaps.init({loadMaps: true}))
+        // .pipe(terser())
+        //.pipe(sourcemaps.write('./'))
         .pipe(dest(paths.web));
 }
 
@@ -83,4 +99,4 @@ function watchFiles(cb) {
 const update = series(renderAsciidoctorExample);
 
 exports.dev = series(update, parallel(webServer, watchFiles));
-exports.js = processJavascript;
+exports.js = addHighlightjsJavascript;
