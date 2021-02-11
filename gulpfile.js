@@ -7,6 +7,7 @@ const browserify = require('browserify');
 const connect = require('gulp-connect');
 const fs = require('fs-extra')
 const log = require('gulplog');
+const postcss = require('gulp-postcss');
 const rename = require("gulp-rename");
 const sourcemaps = require('gulp-sourcemaps');
 const tap = require('gulp-tap');
@@ -49,27 +50,10 @@ function addHighlightjsJavascript() {
         .pipe(dest(paths.web + "/js"));
 }
 
-function processJavascriptx() {
-    return src('src/main/js/*.js', {read: false})
-        .pipe(tap(function (file) {
-            if (file.relative.endsWith('.bundle.js')) {
-                log.info('Processing JS bundle ' + file.path);
-                file.contents = browserify(file.relative, {
-                    basedir: 'src/main/js/', 
-                    detectGlobals: false, 
-                    debug: true
-                })
-                .plugin('browser-pack-flat/plugin')
-                .bundle();
-            } else {
-                log.info('Processing JS source ' + file.path);
-            }
-        }))
-        .pipe(buffer())
-        //.pipe(sourcemaps.init({loadMaps: true}))
-        // .pipe(terser())
-        //.pipe(sourcemaps.write('./'))
-        .pipe(dest(paths.web));
+function addSiteCss() {
+    return src('src/main/css/spring.css', {sourcemaps})
+        .pipe(postcss())
+        .pipe(dest(paths.web + "/css"));
 }
 
 function renderAsciidoctorExample() {
@@ -99,4 +83,4 @@ function watchFiles(cb) {
 const update = series(renderAsciidoctorExample);
 
 exports.dev = series(update, parallel(webServer, watchFiles));
-exports.js = addHighlightjsJavascript;
+exports.js = series(addHighlightjsJavascript, addSiteCss);
