@@ -1,49 +1,80 @@
-:root {
-  --body-font-color: black;
-  --scrollbar-thumb-color: silver;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
+:root {
   --html-font-size: 1.0625em; /* 17px */
   --html-desktop-font-size: 1.125em; /* 18px */
   --html-print-font-size: 0.9375em; /* 15px */
 
   --pixel-to-rem: 18 * 1rem;
 
-  --book-font-color: black;
-  --book-margin: 0 auto;
-  --book-desktop-margin: 0 2rem;
-  --book-max-width: calc(720 / var(--pixel-to-rem));
-  --book-desktop-max-width: calc(828 / var(--pixel-to-rem));
-  --book-heading-font-color: black;
-  --book-heading-font-weight: bold;
-  --book-alt-heading-font-weight: 500;
-  --book-section-divider-color: red;
-  --book-link-font-color: red;
-  --book-hover-link-font-color: red;
-  --book-unresolved-link-font-color: red;
-  --book-code-font-color: blue;
-  --book-code-background: silver;
-  --book-table-border-color: red;
-  --book-table-stripe-background: silver;  
-  --book-table-footer-background: green;
-  --book-admonition-background: red;
-  --book-admonition-label-font-weight: normal;
-  --book-caution-color: red;
-  --book-important-color: red;
-  --book-note-color: red;
-  --book-tip-color: red;
-  --book-warning-color: red;
-  --book-warning-on-color: red;
-  --book-abstract-background: red;
-  --book-abstract-border-color: red;
-  --book-abstract-font-color: red;
-  --book-quote-background: red;
-  --book-quote-attribution-font-color: red;
-  --book-caption-font-color: red;
-  --book-caption-font-weight: normal;
-  --book-example-background: red;
-  --book-example-border-color: red;
-  --book-sidebar-background: red;
-  
+  --color-white: #fff;
+  --color-smoke-10: #fefefe;
+  --color-smoke-30: #fafafa;
+  --color-smoke-50: #f5f5f5;
+  --color-smoke-70: #f0f0f0;
+  --color-smoke-90: #e1e1e1;
+  --color-gray-10: #c1c1c1;
+  --color-gray-30: #8e8e8e;
+  --color-gray-50: #808080;
+  --color-gray-70: #5d5d5d;
+  --color-jet-20: #4a4a4a;
+  --color-jet-30: #424242;
+  --color-jet-50: #333;
+  --color-jet-70: #222;
+  --color-jet-80: #191919;
+  --color-black: #000;
+
+  --body-font-color: black;
+  --scrollbar-thumb-color: silver;
+  --panel-border-color: var(--color-smoke-90);
+  --panel-background: var(--color-smoke-30);
+
+  --asciidoctor-margin: 0 auto;
+  --asciidoctor-max-width: calc(720 / var(--pixel-to-rem));
+  --asciidoctor-desktop-margin: 0 2rem;
+  --asciidoctor-desktop-max-width: calc(828 / var(--pixel-to-rem));
+  --asciidoctor-font-color: var(--color-jet-70);
+  --asciidoctor-heading-font-color: var(--color-jet-80);
+  --asciidoctor-heading-font-weight: normal;
+  --asciidoctor-alt-heading-font-weight: 500;
+  --asciidoctor-section-divider-color: var(--panel-border-color);
+  --asciidoctor-link-font-color: #1565c0;
+  --asciidoctor-hover-link-font-color: #104d92;
+  --asciidoctor-unresolved-link-font-color: #d32f2f;
+  --asciidoctor-code-font-color: var(--asciidoctor-font-color);
+  --asciidoctor-code-background: var(--panel-background);
+  --asciidoctor-table-border-color: var(--panel-border-color);
+  --asciidoctor-table-stripe-background: var(--panel-background);
+  --asciidoctor-table-footer-background: linear-gradient(to bottom, var(--color-smoke-70) 0%, var(--color-white) 100%);
+  --asciidoctor-admonition-background: var(--panel-background);
+  --asciidoctor-admonition-label-font-weight: 500;
+  --asciidoctor-caution-color: #a0439c;
+  --asciidoctor-caution-on-color: var(--color-white);
+  --asciidoctor-important-color: #d32f2f;
+  --asciidoctor-important-on-color: var(--color-white);
+  --asciidoctor-note-color: #217ee7;
+  --asciidoctor-note-on-color: var(--color-white);
+  --asciidoctor-tip-color: #41af46;
+  --asciidoctor-tip-on-color: var(--color-white);
+  --asciidoctor-warning-color: #e18114;
+  --asciidoctor-warning-on-color: var(--color-white);
+
+  --asciidoctor-abstract-background: var(--color-smoke-70);
+  --asciidoctor-abstract-border-color: var(--panel-border-color);
+  --asciidoctor-abstract-font-color: var(--color-jet-20);
+  --asciidoctor-quote-background: var(--panel-background);
+  --asciidoctor-quote-attribution-font-color: var(--color-gray-30);
+  --asciidoctor-caption-font-color: var(--color-gray-70);
+  --asciidoctor-caption-font-weight: 500;
+  --asciidoctor-example-background: var(--color-white);
+  --asciidoctor-example-border-color: var(--color-gray-70);
+  --asciidoctor-sidebar-background: var(--color-smoke-90);
+  --asciidoctor-pre-background: var(--panel-background);
+  --asciidoctor-pre-border-color:var(--panel-background);
+  --asciidoctor-pre-annotation-font-color: var(--color-gray-50);
+
   --highlight-background-color: #f8f8f8;
   --highlight-font-color: #333;
   --highlight-comment-font-color: #998;

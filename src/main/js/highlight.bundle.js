@@ -16,6 +16,7 @@
   hljs.registerLanguage('markdown', require('highlight.js/lib/languages/markdown'));
   hljs.registerLanguage('nix', require('highlight.js/lib/languages/nix'));
   hljs.registerLanguage('properties', require('highlight.js/lib/languages/properties'));
+  hljs.registerLanguage('ruby', require('highlight.js/lib/languages/ruby'));
   hljs.registerLanguage('scala', require('highlight.js/lib/languages/scala'));
   hljs.registerLanguage('shell', require('highlight.js/lib/languages/shell'));
   hljs.registerLanguage('sql', require('highlight.js/lib/languages/sql'));

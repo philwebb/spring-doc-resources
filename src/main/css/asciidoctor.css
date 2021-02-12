@@ -8,11 +8,11 @@
 .book #header,
 .book #content,
 .book #footer {
-  color: var(--book-font-color);
+  color: var(--asciidoctor-font-color);
   hyphens: auto;
   line-height: 1.6;
-  margin: var(--book-margin);
-  max-width: var(--book-max-width);
+  margin: var(--asciidoctor-margin);
+  max-width: var(--asciidoctor-max-width);
   padding: 0 1rem 4rem;
 }
 
@@ -20,8 +20,8 @@
   .book #header,
   .book #content,
   .book #footer {
-    margin: var(--book-desktop-margin);
-    max-width: var(--book-desktop-max-width);
+    margin: var(--asciidoctor-desktop-margin);
+    max-width: var(--asciidoctor-desktop-max-width);
     min-width: 0;
   }
 }
@@ -37,15 +37,15 @@
 .book h4,
 .book h5,
 .book h6 {
-  color: var(--book-heading-font-color);
-  font-weight: var(--book-heading-font-weight);
+  color: var(--asciidoctor-heading-font-color);
+  font-weight: var(--asciidoctor-heading-font-weight);
   hyphens: none;
   line-height: 1.3;
   margin: 1rem 0 0;
 }
 
 .book h1.sect0 {
-  background: var(--book-abstract-background);
+  background: var(--asciidoctor-abstract-background);
   font-size: 1.8em;
   margin: 1.5rem -1rem 0;
   padding: 0.5rem 1rem;
@@ -57,7 +57,7 @@
 }
 
 .book h2:not(.discrete) {
-  border-bottom: 1px solid var(--book-section-divider-color);
+  border-bottom: 1px solid var(--asciidoctor-section-divider-color);
   margin-left: -1rem;
   margin-right: -1rem;
   padding: 0.4rem 1rem 0.1rem;
@@ -109,15 +109,15 @@
 }
 
 .book a {
-  color: var(--book-link-font-color);
+  color: var(--asciidoctor-link-font-color);
 }
 
 .book a:hover {
-  color: var(--book-hover-link-font-color);
+  color: var(--asciidoctor-hover-link-font-color);
 }
 
 .book a.unresolved {
-  color: var(--book-unresolved-link-font-color);
+  color: var(--asciidoctor-unresolved-link-font-color);
 }
 
 .book i.fa {
@@ -127,8 +127,8 @@
 
 .book p code,
 .book thead code {
-  color: var(--book-code-font-color);
-  background: var(--book-code-background);
+  color: var(--asciidoctor-code-font-color);
+  background: var(--asciidoctor-code-background);
   border-radius: 0.25em;
   font-size: 0.95em;
   padding: 0.125em 0.25em;
@@ -210,24 +210,24 @@
 }
 
 .book table.tableblock thead th {
-  border-bottom: 2.5px solid var(--book-table-border-color);
+  border-bottom: 2.5px solid var(--asciidoctor-table-border-color);
 }
 
 .book table.tableblock td,
 .book table.tableblock > :not(thead) th {
-  border-top: 1px solid var(--book-table-border-color);
-  border-bottom: 1px solid var(--book-table-border-color);
+  border-top: 1px solid var(--asciidoctor-table-border-color);
+  border-bottom: 1px solid var(--asciidoctor-table-border-color);
 }
 
 .book table.stripes-all > tbody > tr,
 .book table.stripes-odd > tbody > tr:nth-of-type(odd),
 .book table.stripes-even > tbody > tr:nth-of-type(even),
 .book table.stripes-hover > tbody > tr:hover {
-  background: var(--book-table-stripe-background);
+  background: var(--asciidoctor-table-stripe-background);
 }
 
 .book table.tableblock > tfoot {
-  background: var(--book-table-footer-background);
+  background: var(--asciidoctor-table-footer-background);
 }
 
 .book .halign-left {
@@ -280,7 +280,7 @@
 
 .book .admonitionblock td.content {
   padding: 1rem 1rem 0.75rem;
-  background: var(--book-admonition-background);
+  background: var(--asciidoctor-admonition-background);
   width: 100%;
   word-wrap: anywhere;
 }
@@ -293,35 +293,35 @@
   padding: 0 0.5rem;
   height: 1.25rem;
   line-height: 1;
-  font-weight: var(--book-admonition-label-font-weight);
+  font-weight: var(--asciidoctor-admonition-label-font-weight);
   text-transform: uppercase;
   border-radius: 0.45rem;
   transform: translate(-0.5rem, -50%);
 }
 
 .book .admonitionblock.caution .icon {
-  background-color: var(--book-caution-color);
-  color: var(--caution-on-color);
+  background-color: var(--asciidoctor-caution-color);
+  color: var(--asciidoctor-caution-on-color);
 }
 
 .book .admonitionblock.important .icon {
-  background-color: var(--book-important-color);
-  color: var(--book-important-on-color);
+  background-color: var(--asciidoctor-important-color);
+  color: var(--asciidoctor-important-on-color);
 }
 
 .book .admonitionblock.note .icon {
-  background-color: var(--book-note-color);
-  color: var(--book-note-on-color);
+  background-color: var(--asciidoctor-note-color);
+  color: var(--asciidoctor-note-on-color);
 }
 
 .book .admonitionblock.tip .icon {
-  background-color: var(--book-tip-color);
-  color: var(--book-tip-on-color);
+  background-color: var(--asciidoctor-tip-color);
+  color: var(--asciidoctor-tip-on-color);
 }
 
 .book .admonitionblock.warning .icon {
-  background-color: var(--book-warning-color);
-  color: var(--book-warning-on-color);
+  background-color: var(--asciidoctor-warning-color);
+  color: var(--asciidoctor-warning-on-color);
 }
 
 .book .admonitionblock .icon i {
@@ -353,16 +353,16 @@
 }
 
 .book #preamble .abstract blockquote {
-  background: var(--book-abstract-background);
-  border-left: 5px solid var(--book-abstract-border-color);
-  color: var(--book-abstract-font-color);
+  background: var(--asciidoctor-abstract-background);
+  border-left: 5px solid var(--asciidoctor-abstract-border-color);
+  color: var(--asciidoctor-abstract-font-color);
   font-size: calc(16 / var(--pixel-to-rem));
   padding: 0.75em 1em;
 }
 
 .book .quoteblock,
 .book .verseblock {
-  background: var(--book-quote-background);
+  background: var(--asciidoctor-quote-background);
   border-left: 5px solid var(--quote-border-color);
   color: var(--quote-font-color);
 }
@@ -372,7 +372,7 @@
 }
 
 .book .quoteblock .attribution {
-  color: var(--book-quote-attribution-font-color);
+  color: var(--asciidoctor-quote-attribution-font-color);
   font-size: calc(15 / var(--pixel-to-rem));
   margin-top: 0.75rem;
 }
@@ -515,9 +515,9 @@
 .book .listingblock .title,
 .book .openblock .title,
 .book .tableblock caption {
-  color: var(--book-caption-font-color);
+  color: var(--asciidoctor-caption-font-color);
   font-size: calc(16 / var(--pixel-to-rem));
-  font-weight: var(--book-caption-font-weight);
+  font-weight: var(--asciidoctor-caption-font-weight);
   font-style: italic;
   hyphens: none;
   letter-spacing: 0.01em;
@@ -531,8 +531,8 @@
 }
 
 .book .exampleblock > .content {
-  background: var(--book-example-background);
-  border: 0.25rem solid var(--book-example-border-color);
+  background: var(--asciidoctor-example-background);
+  border: 0.25rem solid var(--asciidoctor-example-border-color);
   border-radius: 0.5rem;
   padding: 0.75rem;
 }
@@ -542,14 +542,14 @@
 }
 
 .book .sidebarblock {
-  background: var(--book-sidebar-background);
+  background: var(--asciidoctor-sidebar-background);
   border-radius: 0.75rem;
   padding: 0.75rem 1.5rem;
 }
 
 .book .sidebarblock > .content > .title {
   font-size: calc(22.5 / var(--pixel-to-rem));
-  font-weight: var(--book-alt-heading-font-weight);
+  font-weight: var(--asciidoctor-alt-heading-font-weight);
   line-height: 1.3;
   margin-bottom: -0.3em;
   text-align: center;
@@ -568,8 +568,8 @@
 .book pre.highlight code,
 .book .listingblock pre:not(.highlight),
 .book .literalblock pre {
-  background: var(--book-pre-background);
-  box-shadow: inset 0 0 1.75px var(--book-pre-border-color);
+  background: var(--asciidoctor-pre-background);
+  box-shadow: inset 0 0 1.75px var(--asciidoctor-pre-border-color);
   display: block;
   overflow-x: auto;
   padding: 0.75rem;
@@ -635,7 +635,6 @@
   border: 1px solid currentColor;
   border-radius: 100%;
   display: inline-block;
-  font-family: var(--book-body-font-family);
   font-size: calc(13.5 / var(--pixel-to-rem));
   font-style: normal;
   line-height: 1.2;
@@ -655,7 +654,7 @@
 }
 
 .book hr {
-  border: solid var(--book-section-divider-color);
+  border: solid var(--asciidoctor-section-divider-color);
   border-width: 2px 0 0;
   height: 0;
 }
@@ -677,10 +676,10 @@
 .book kbd {
   display: inline-block;
   font-size: calc(12 / var(--pixel-to-rem));
-  background: var(--book-kbd-background);
-  border: 1px solid var(--book-kbd-border-color);
+  background: var(--asciidoctor-kbd-background);
+  border: 1px solid var(--asciidoctor-kbd-border-color);
   border-radius: 0.25em;
-  box-shadow: 0 1px 0 var(--book-kbd-border-color), 0 0 0 0.1em var(--body-background) inset;
+  box-shadow: 0 1px 0 var(--asciidoctor-kbd-border-color), 0 0 0 0.1em var(--body-background) inset;
   padding: 0.25em 0.5em;
   vertical-align: text-bottom;
   white-space: nowrap; 
@@ -715,7 +714,7 @@
 .book .menuseq i.caret::before {
   content: "\203a";
   font-size: 1.1em;
-  font-weight: var(--book-body-font-weight-bold);
+  font-weight: var(--asciidoctor-body-font-weight-bold);
   line-height: calc(1 / 1.1);
 }
 

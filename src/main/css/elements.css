@@ -19,13 +19,41 @@ html {
 body {
   margin: 0;
   overflow-wrap: anywhere;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Roboto", sans-serif;
+
+/*  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; */
+
   color: var(--body-font-color);
+  background: var(--body-background);
 } 
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  background-color: none;
+}
+
+
+code,
+kbd,
+pre {
+  font-family: "Roboto Mono", "monospace";
+}
 
 @supports (scrollbar-width: thin) {
   body * {
     scrollbar-width: thin;
     scrollbar-color: var(--scrollbar-thumb-color) transparent;
   }
+}
+
+table {
+  border-collapse: collapse;
+  word-wrap: normal;
 }
