@@ -9,28 +9,18 @@
 
   --pixel-to-rem: 18 * 1rem;
 
-  --color-white: #fff;
-  --color-smoke-10: #fefefe;
-  --color-smoke-30: #fafafa;
-  --color-smoke-50: #f5f5f5;
   --color-smoke-70: #f0f0f0;
   --color-smoke-90: #e1e1e1;
-  --color-gray-10: #c1c1c1;
   --color-gray-30: #8e8e8e;
-  --color-gray-50: #808080;
   --color-gray-70: #5d5d5d;
-  --color-jet-20: #4a4a4a;
-  --color-jet-30: #424242;
-  --color-jet-50: #333;
   --color-jet-70: #222;
   --color-jet-80: #191919;
-  --color-black: #000;
-
+  
   --body-font-color: black;
   --scrollbar-thumb-color: silver;
-  --panel-border-color: var(--color-smoke-90);
-  --panel-background: var(--color-smoke-30);
-
+  
+  --asciidoctor-panel-border-color: var(--color-smoke-90);
+  --asciidoctor-panel-background: #fafafa;
   --asciidoctor-margin: 0 auto;
   --asciidoctor-max-width: calc(720 / var(--pixel-to-rem));
   --asciidoctor-desktop-margin: 0 2rem;
@@ -39,41 +29,40 @@
   --asciidoctor-heading-font-color: var(--color-jet-80);
   --asciidoctor-heading-font-weight: normal;
   --asciidoctor-alt-heading-font-weight: 500;
-  --asciidoctor-section-divider-color: var(--panel-border-color);
+  --asciidoctor-section-divider-color: var(--asciidoctor-panel-border-color);
   --asciidoctor-link-font-color: #1565c0;
   --asciidoctor-hover-link-font-color: #104d92;
   --asciidoctor-unresolved-link-font-color: #d32f2f;
   --asciidoctor-code-font-color: var(--asciidoctor-font-color);
-  --asciidoctor-code-background: var(--panel-background);
-  --asciidoctor-table-border-color: var(--panel-border-color);
-  --asciidoctor-table-stripe-background: var(--panel-background);
-  --asciidoctor-table-footer-background: linear-gradient(to bottom, var(--color-smoke-70) 0%, var(--color-white) 100%);
-  --asciidoctor-admonition-background: var(--panel-background);
+  --asciidoctor-code-background: var(--asciidoctor-panel-background);
+  --asciidoctor-table-border-color: var(--asciidoctor-panel-border-color);
+  --asciidoctor-table-stripe-background: var(--asciidoctor-panel-background);
+  --asciidoctor-table-footer-background: linear-gradient(to bottom, var(--color-smoke-70) 0%, white 100%);
+  --asciidoctor-admonition-background: var(--asciidoctor-panel-background);
   --asciidoctor-admonition-label-font-weight: 500;
   --asciidoctor-caution-color: #a0439c;
-  --asciidoctor-caution-on-color: var(--color-white);
+  --asciidoctor-caution-on-color: white;
   --asciidoctor-important-color: #d32f2f;
-  --asciidoctor-important-on-color: var(--color-white);
+  --asciidoctor-important-on-color: white;
   --asciidoctor-note-color: #217ee7;
-  --asciidoctor-note-on-color: var(--color-white);
+  --asciidoctor-note-on-color: white;
   --asciidoctor-tip-color: #41af46;
-  --asciidoctor-tip-on-color: var(--color-white);
+  --asciidoctor-tip-on-color: white;
   --asciidoctor-warning-color: #e18114;
-  --asciidoctor-warning-on-color: var(--color-white);
+  --asciidoctor-warning-on-color: white;
 
   --asciidoctor-abstract-background: var(--color-smoke-70);
-  --asciidoctor-abstract-border-color: var(--panel-border-color);
-  --asciidoctor-abstract-font-color: var(--color-jet-20);
-  --asciidoctor-quote-background: var(--panel-background);
+  --asciidoctor-abstract-border-color: var(--asciidoctor-panel-border-color);
+  --asciidoctor-abstract-font-color: var(--color-gray-70);
+  --asciidoctor-quote-background: var(--asciidoctor-panel-background);
   --asciidoctor-quote-attribution-font-color: var(--color-gray-30);
   --asciidoctor-caption-font-color: var(--color-gray-70);
   --asciidoctor-caption-font-weight: 500;
-  --asciidoctor-example-background: var(--color-white);
+  --asciidoctor-example-background: white;
   --asciidoctor-example-border-color: var(--color-gray-70);
   --asciidoctor-sidebar-background: var(--color-smoke-90);
-  --asciidoctor-pre-background: var(--panel-background);
-  --asciidoctor-pre-border-color:var(--panel-background);
-  --asciidoctor-pre-annotation-font-color: var(--color-gray-50);
+  --asciidoctor-pre-background: var(--asciidoctor-panel-background);
+  --asciidoctor-pre-border-color:var(--asciidoctor-panel-background);
 
   --highlight-background-color: #f8f8f8;
   --highlight-font-color: #333;
