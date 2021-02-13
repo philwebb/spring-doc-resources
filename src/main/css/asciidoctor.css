@@ -28,14 +28,12 @@
   }
 }
 
-/* Book element styling for diffent screen types */
-
-
-/* Preable and initial sections */
+/* Section spacing */
 
 .book #preamble + .sect1,
 .book #header .sect1 + .sect1,
 .book #container .sect1 + .sect1 {
+  border-top: 1px solid var(--asciidoctor-section-divider-color);
   margin-top: 2rem;
 }
 
@@ -52,7 +50,7 @@
   font-weight: var(--asciidoctor-heading-font-weight);
   hyphens: none;
   line-height: 1.3;
-  margin: 1rem 0 0;
+  margin: 2rem 0 0;
 }
 
 .book #header h1.sect0,
@@ -70,14 +68,13 @@
 }
 
 .book #content h2:not(.discrete) {
-  border-bottom: 1px solid var(--asciidoctor-section-divider-color);
   margin-left: -1rem;
   margin-right: -1rem;
   padding: 0.4rem 1rem 0.1rem;
 }
 
 .book #content h3:not(.discrete) {
-  font-weight: var(--boot-alt-heading-font-weight);
+  font-weight: var(--asciidoctor-alt-heading-font-weight);
 }
 
 /* Header hover anchors */

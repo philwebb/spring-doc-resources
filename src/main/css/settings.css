@@ -27,8 +27,8 @@
   --asciidoctor-desktop-max-width: calc(828 / var(--pixel-to-rem));
   --asciidoctor-font-color: var(--color-jet-70);
   --asciidoctor-heading-font-color: var(--color-jet-80);
-  --asciidoctor-heading-font-weight: normal;
-  --asciidoctor-alt-heading-font-weight: 500;
+  --asciidoctor-heading-font-weight: 600;
+  --asciidoctor-alt-heading-font-weight: 600;
   --asciidoctor-section-divider-color: var(--asciidoctor-panel-border-color);
   --asciidoctor-link-font-color: #1565c0;
   --asciidoctor-hover-link-font-color: #104d92;

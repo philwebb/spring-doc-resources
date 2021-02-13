@@ -20,6 +20,7 @@ const paths = {
 
 const ASCIIDOC_ATTRIBUTES = [
     'icons=font',
+    'iconfont-remote!',
     'idprefix',
     'idseparator=-',
     'docinfo',
