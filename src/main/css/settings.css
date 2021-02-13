@@ -1,13 +1,45 @@
+/* FIXME drop */
+
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 :root {
-  --html-font-size: 1.0625em; /* 17px */
-  --html-desktop-font-size: 1.125em; /* 18px */
+
+}
+
+:root {
+
+}
+
+@media screen and (min-width: 1024px) {
+  :root {
+
+  }
+  }
+
+@media print {
+  :root {
+
+  }
+}
+
+
+:root {
+
+  /*
+
+  FIXME move desktop version to here and just use vars?
+
+  --html-font-size: 1.0625em; /* 17px *
+  --html-desktop-font-size: 1.125em; /* 18px *
   --html-print-font-size: 0.9375em; /* 15px */
 
-  --pixel-to-rem: 18 * 1rem;
+  --html-font-size: 1em; /* 17px */
+  --html-desktop-font-size: 1em; /* 18px */
+  --html-print-font-size: 0.9375em; /* 15px */
+
+  --pixel-to-rem: 16 * 1rem;
 
   --color-smoke-70: #f0f0f0;
   --color-smoke-90: #e1e1e1;
