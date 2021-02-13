@@ -3,19 +3,6 @@ html {
   font-size: var(--html-font-size);
 }
 
-@media screen and (min-width: 1024px) {
-  html {
-    font-size: var(--html-desktop-font-size);
-  }
-}
-
-@media print {
-  html {
-    font-size: var(--html-print-font-size);
-  }
-}
-
-
 body {
   margin: 0;
   overflow-wrap: anywhere;

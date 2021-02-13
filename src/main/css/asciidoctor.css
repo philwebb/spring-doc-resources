@@ -16,14 +16,6 @@
   padding: 0 1rem 4rem;
 }
 
-@media screen and (min-width: 1024px) {
-  .book {
-    margin: var(--asciidoctor-desktop-margin);
-    max-width: var(--asciidoctor-desktop-max-width);
-    min-width: 0;
-  }
-}
-
 /* Section setup */
 
 .book #preamble + .sect1,
@@ -37,7 +29,6 @@
 
 /* Headers */
 
-/* FIXME use pixel cal? */
 .book h1 {
   font-size: 2em;
 }
@@ -79,7 +70,6 @@
   margin: 2rem 0 0;
 }
 
-
 .book h1.sect0 {
   background: var(--asciidoctor-abstract-background);
   font-size: 1.8em;
@@ -88,7 +78,6 @@
 }
 
 .book h1:first-child {
-  /* font-size: calc(36 / var(--pixel-to-rem)); FIXME */ 
   margin: 1.5rem 0;
 }
 

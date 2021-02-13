@@ -4,43 +4,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
-:root {
 
+/* Baseline */
+
+:root {
+  --html-font-size: 1em;
+  --pixel-to-rem: 16 * 1rem;
 }
 
-:root {
+/*  Desktop */
 
-}
-
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   :root {
+  }
+}
 
-  }
-  }
+/*  Printing */
 
 @media print {
   :root {
-
   }
 }
 
 
 :root {
-
-  /*
-
-  FIXME move desktop version to here and just use vars?
-
-  --html-font-size: 1.0625em; /* 17px *
-  --html-desktop-font-size: 1.125em; /* 18px *
-  --html-print-font-size: 0.9375em; /* 15px */
-
-  --html-font-size: 1em; /* 17px */
-  --html-desktop-font-size: 1em; /* 18px */
-  --html-print-font-size: 0.9375em; /* 15px */
-
-  --pixel-to-rem: 16 * 1rem;
-
   --color-smoke-70: #f0f0f0;
   --color-smoke-90: #e1e1e1;
   --color-gray-30: #8e8e8e;
@@ -50,13 +37,15 @@
   
   --body-font-color: black;
   --scrollbar-thumb-color: silver;
-  
+}
+
+/* Asciidoctor */
+
+body.book {
   --asciidoctor-panel-border-color: var(--color-smoke-90);
   --asciidoctor-panel-background: #fafafa;
   --asciidoctor-margin: 0 auto;
   --asciidoctor-max-width: calc(720 / var(--pixel-to-rem));
-  --asciidoctor-desktop-margin: 0 2rem;
-  --asciidoctor-desktop-max-width: calc(828 / var(--pixel-to-rem));
   --asciidoctor-font-color: var(--color-jet-70);
   --asciidoctor-heading-font-color: var(--color-jet-80);
   --asciidoctor-heading-font-weight: 600;
@@ -95,7 +84,20 @@
   --asciidoctor-sidebar-background: var(--color-smoke-90);
   --asciidoctor-pre-background: var(--asciidoctor-panel-background);
   --asciidoctor-pre-border-color:var(--asciidoctor-panel-background);
+}
 
+/* Asciidoctor Desktop */
+
+@media screen and (min-width: 1025px) {
+  body.book {
+    --asciidoctor-margin: 0 2rem;
+    --asciidoctor-max-width: calc(828 / var(--pixel-to-rem));
+  }
+}
+
+/* Highlight JS */
+
+code.hljs {
   --highlight-background-color: #f8f8f8;
   --highlight-font-color: #333;
   --highlight-comment-font-color: #998;
