@@ -1,0 +1,10 @@
+div {
+    border: 1px solid red;
+    margin: 3px;
+}
+
+.toc2 {
+    position: fixed;
+    left: 0;
+    top: 0;
+}
