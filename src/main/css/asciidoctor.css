@@ -5,7 +5,7 @@
   display: none;
 }
 
-/* Container element styling for diffent screen types */
+/* Container element styling */
 
 .book {
   color: var(--asciidoctor-font-color);
@@ -14,6 +14,33 @@
   margin: var(--asciidoctor-margin);
   max-width: var(--asciidoctor-max-width);
   padding: 0 1rem 4rem;
+}
+
+/* Header Details */
+
+.book #header .details {
+  background: var(--asciidoctor-details-background);
+  padding: 1rem 1.5rem;
+  font-weight: 100;
+}
+
+.book #header div.details {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#header .details br {
+  display: none;
+}
+
+.book #header .details span.author:after {
+  content: "\22c5";
+  font-weight: 700;
+  margin: 0.4em;
+}
+
+#header .details span.author:nth-last-child(2):after {
+  content:  "";
 }
 
 /* Section setup */
@@ -27,18 +54,18 @@
   border-top: 1px solid var(--asciidoctor-section-divider-color);
 }
 
-/* Headers */
+/* Headings */
 
 .book h1 {
-  font-size: 2em;
+  font-size: 2.1em;
 }
 
 .book h2 {
-  font-size: 1.8em;
+  font-size: 1.7em;
 }
 
 .book h3 {
-  font-size: 1.5em;
+  font-size: 1.6em;
 }
 
 .book h4 {
@@ -172,10 +199,43 @@
 }
 
 .book pre {
-  font-size: calc(16 / var(--pixel-to-rem));
+  font-size: calc(15 / var(--pixel-to-rem));
   line-height: 1.3;
   margin: 0;
+  border-radius: 6px;
 }
+
+.book pre.highlight code,
+.book .listingblock pre:not(.highlight),
+.book .literalblock pre {
+  background: var(--asciidoctor-pre-background);
+  box-shadow: inset 0 0 1.75px var(--asciidoctor-pre-border-color);
+  display: block;
+  overflow-x: auto;
+  padding: 0.75rem;
+  border-radius: 2px;
+}
+
+.book pre.highlight code[data-lang]:before {
+  content: attr(data-lang);
+  text-transform: uppercase;
+  display: block;
+  position: absolute;
+  top: 0.425rem;
+  right: 0.5rem;
+  line-height: 1;
+  font-size: 0.7em;
+  color: var(--asciidoctor-code-data-lang-color);
+}
+
+.book pre.highlight {
+  position: relative;
+}
+
+.book table pre.highlight code[data-lang]:before {
+  display: none;
+}
+
 
 /* General margin and fonts sizing */
 
@@ -639,19 +699,7 @@
   word-break: break-word;
 }
 
-.book pre.highlight code,
-.book .listingblock pre:not(.highlight),
-.book .literalblock pre {
-  background: var(--asciidoctor-pre-background);
-  box-shadow: inset 0 0 1.75px var(--asciidoctor-pre-border-color);
-  display: block;
-  overflow-x: auto;
-  padding: 0.75rem;
-}
 
-.book pre.highlight {
-  position: relative;
-}
 
 .book .language-console .hljs-meta {
   user-select: none;

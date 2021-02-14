@@ -42,8 +42,9 @@
 /* Asciidoctor */
 
 body.book {
+  --asciidoctor-details-background: #ebf2f2;
   --asciidoctor-panel-border-color: var(--color-smoke-90);
-  --asciidoctor-panel-background: #fafafa;
+  --asciidoctor-panel-background: #f6f8fa;
   --asciidoctor-margin: 0 auto;
   --asciidoctor-max-width: calc(720 / var(--pixel-to-rem));
   --asciidoctor-font-color: var(--color-jet-70);
@@ -56,6 +57,7 @@ body.book {
   --asciidoctor-unresolved-link-font-color: #d32f2f;
   --asciidoctor-code-font-color: var(--asciidoctor-font-color);
   --asciidoctor-code-background: var(--asciidoctor-panel-background);
+  --asciidoctor-code-data-lang-color: #999;
   --asciidoctor-table-border-color: var(--asciidoctor-panel-border-color);
   --asciidoctor-table-stripe-background: var(--asciidoctor-panel-background);
   --asciidoctor-table-footer-background: linear-gradient(to bottom, var(--color-smoke-70) 0%, white 100%);
@@ -83,7 +85,7 @@ body.book {
   --asciidoctor-example-border-color: var(--color-gray-70);
   --asciidoctor-sidebar-background: var(--color-smoke-90);
   --asciidoctor-pre-background: var(--asciidoctor-panel-background);
-  --asciidoctor-pre-border-color:var(--asciidoctor-panel-background);
+  --asciidoctor-pre-border-color:var(--asciidoctor-panel-border-color);
 }
 
 /* Asciidoctor Desktop */
