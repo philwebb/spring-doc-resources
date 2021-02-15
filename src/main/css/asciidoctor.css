@@ -388,6 +388,7 @@
   text-transform: capitalize;
   filter: invert(100%);
   font-weight: var(--asciidoctor-admonition-label-font-weight);
+  color: var(--asciidoctor-admonition-font-color);
   font-style: normal;
   hyphens: none;
   padding: 0 0.5em;
@@ -395,8 +396,7 @@
 }
 
 .book .admonitionblock.caution td.icon {
-  background-color: var(--asciidoctor-caution-color);
-  color: var(--asciidoctor-caution-on-color);
+  background: var(--asciidoctor-admonition-caution-background);
 }
 
 .book .admonitionblock.caution td.icon i {
@@ -404,8 +404,7 @@
 }
 
 .book .admonitionblock.important td.icon {
-  background-color: var(--asciidoctor-important-color);
-  color: var(--asciidoctor-important-on-color);
+  background: var(--asciidoctor-admonition-important-background);
 }
 
 .book .admonitionblock.important td.icon i {
@@ -413,8 +412,7 @@
 }
 
 .book .admonitionblock.note .icon {
-  background-color: var(--asciidoctor-note-color);
-  color: var(--asciidoctor-note-on-color);
+  background: var(--asciidoctor-admonition-note-background);
 }
 
 .book .admonitionblock.note td.icon i {
@@ -422,8 +420,7 @@
 }
 
 .book .admonitionblock.tip .icon {
-  background-color: var(--asciidoctor-tip-color);
-  color: var(--asciidoctor-tip-on-color);
+  background: var(--asciidoctor-admonition-tip-background);
 }
 
 .book .admonitionblock.tip td.icon i {
@@ -431,8 +428,7 @@
 }
 
 .book .admonitionblock.warning .icon {
-  background-color: var(--asciidoctor-warning-color);
-  color: var(--asciidoctor-warning-on-color);
+  background-color: var(--asciidoctor-admonition-warning-background);
 }
 
 .book .admonitionblock.warning td.icon i {
@@ -464,7 +460,6 @@
 .book #preamble .abstract blockquote {
   background: var(--asciidoctor-abstract-background);
   border-left: 5px solid var(--asciidoctor-abstract-border-color);
-  color: var(--asciidoctor-abstract-font-color);
   font-size: calc(16 / var(--pixel-to-rem));
   padding: 0.75em 1em;
 }
@@ -472,8 +467,7 @@
 .book .quoteblock,
 .book .verseblock {
   background: var(--asciidoctor-quote-background);
-  border-left: 5px solid var(--quote-border-color);
-  color: var(--quote-font-color);
+  border-left: 5px solid var(--asciidoctor-quote-border-color);
 }
 
 .book .quoteblock {
@@ -801,10 +795,11 @@
 }
 
 .book .conum[data-value] {
-  border: 1px solid currentColor;
+  /* border: 1px solid currentColor; */
+  font-family: var(--monospace-font-family);
   border-radius: 100%;
   display: inline-block;
-  font-size: calc(13.5 / var(--pixel-to-rem));
+  font-size: calc(12.5 / var(--pixel-to-rem));
   font-style: normal;
   line-height: 1.2;
   text-align: center;
@@ -812,6 +807,8 @@
   height: 1.25em;
   letter-spacing: -0.25ex;
   text-indent: -0.25ex;
+  background: var(--asciidoctor-callout-background);
+  color: var(--asciidoctor-callout-font-color);
 }
 
 .book .conum[data-value]::after {

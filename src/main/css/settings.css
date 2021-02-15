@@ -1,10 +1,3 @@
-/* FIXME drop */
-
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
-
-
 /* Baseline */
 
 :root {
@@ -26,29 +19,17 @@
   }
 }
 
-
 :root {
-  --color-smoke-70: #f0f0f0;
-  --color-smoke-90: #e1e1e1;
-  --color-gray-30: #8e8e8e;
-  --color-gray-70: #5d5d5d;
-  --color-jet-70: #222;
-  --color-jet-80: #191919;
-  --color-light-gray: #eee;
-
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --monospace-font-family: "SFMono-Regular","Consolas","Liberation Mono","Menlo","monospace";
   --color-spring-light-blue: #ebf2f2;
   --color-spring-medium-blue: #d7e7e7;
   --color-spring-green: #80ea6e;
   --color-spring-dark-green: #6db33f;
-
   --body-font-color: #191e1e;
-  --body-font-dark-color: #141818;
   --body-font-light-color: #273030;
+  --body-font-dark-color: #141818;
   --scrollbar-thumb-color: silver;
-
-  --color-github-panel: #f6f8fa;
-  --color-github-panel-border: #eaedf0;
-
 }
 
 /* Asciidoctor */
@@ -56,8 +37,8 @@
 body.book {
   --asciidoctor-details-background: var(--color-spring-light-blue);
   --asciidoctor-details-font-color: var(--body-font-light-color);
-  --asciidoctor-panel-background: var(--color-github-panel);
-  --asciidoctor-panel-border-color: var(--color-github-panel-border);
+  --asciidoctor-panel-background: #f6f8fa;
+  --asciidoctor-panel-border-color: #eaedf0;
   --asciidoctor-margin: 0 auto;
   --asciidoctor-max-width: calc(720 / var(--pixel-to-rem));
   --asciidoctor-font-color: var(--body-font-color);
@@ -74,27 +55,20 @@ body.book {
   --asciidoctor-table-border-color: var(--asciidoctor-panel-border-color);
   --asciidoctor-table-header-footer-background: #ebf2f2;
   --asciidoctor-table-stripe-background: var(--color-spring-light-blue);
-  --asciidoctor-table-footer-background: linear-gradient(to bottom, var(--color-smoke-70) 0%, white 100%);
+  --asciidoctor-table-footer-background: linear-gradient(to bottom, var(--color-spring-light-blue) 0%, white 100%);
   --asciidoctor-admonition-background: var(--color-spring-light-blue);
   --asciidoctor-admonition-pre-background: var(--color-spring-medium-blue);
   --asciidoctor-admonition-label-font-weight: 500;
-  
-
-  --asciidoctor-caution-color: #561164;
-  --asciidoctor-caution-on-color: var(--color-smoke-70);
-  --asciidoctor-important-color: #960000;
-  --asciidoctor-important-on-color: var(--color-smoke-70);
-  --asciidoctor-note-color: #015785;
-  --asciidoctor-note-on-color: var(--color-smoke-70);
-  --asciidoctor-tip-color: #3e6b1f;
-  --asciidoctor-tip-on-color: var(--color-smoke-70);
-  --asciidoctor-warning-color: #bd7400;
-  --asciidoctor-warning-on-color: var(--color-smoke-70);
-
-  --asciidoctor-abstract-background: var(--color-smoke-70);
+  --asciidoctor-admonition-font-color: #f0f0f0;
+  --asciidoctor-admonition-caution-background: #561164;
+  --asciidoctor-admonition-important-background: #960000;
+  --asciidoctor-admonition-note-background: #015785;
+  --asciidoctor-admonition-tip-background: #3e6b1f;
+  --asciidoctor-admonition-warning-background: #bd7400;
+  --asciidoctor-abstract-background: var(--asciidoctor-panel-background);
   --asciidoctor-abstract-border-color: var(--asciidoctor-panel-border-color);
-  --asciidoctor-abstract-font-color: var(--color-gray-70);
   --asciidoctor-quote-background: var(--color-spring-light-blue);
+  --asciidoctor-quote-border-color: var(--asciidoctor-panel-border-color);
   --asciidoctor-quote-attribution-font-color: var(--color-spring-dark-green);
   --asciidoctor-caption-font-color: var(--body-font-light-color);
   --asciidoctor-caption-font-weight: 400;
@@ -102,7 +76,9 @@ body.book {
   --asciidoctor-example-border-color: var(--asciidoctor-panel-border-color);
   --asciidoctor-sidebar-background: var(--color-spring-light-blue);
   --asciidoctor-pre-background: var(--asciidoctor-panel-background);
-  --asciidoctor-pre-border-color:var(--asciidoctor-panel-border-color);
+  --asciidoctor-pre-border-color: var(--asciidoctor-panel-border-color);
+  --asciidoctor-callout-background: var(--body-font-light-color);
+  --asciidoctor-callout-font-color: #f0f0f0;
 }
 
 /* Asciidoctor Desktop */
@@ -133,31 +109,3 @@ code.hljs {
   --highlight-deletion-font-color: #24292e;
   --highlight-regex-font-color: #032f62;
 }
-
-/*
-
-  --asciidoctor-admonition-caution-background: #f9ebeb;
-  --asciidoctor-admonition-important-background: #f9ebeb;
-  --asciidoctor-admonition-note-background: #e9f1f6;
-  --asciidoctor-admonition-tip-background: #ecf1e8;
-  --asciidoctor-admonition-warning-background: #fff9e4;
-
-
-  &.important {
-    border-left: 0px solid #e20000;
-    background-color: #f9ebeb;
-  }
-  &.warning {
-    border-left: 0px solid #d88400;
-    background-color: #fff9e4;
-  }
-  &.tip {
-    border-left: 0px solid #0077b9;
-    background-color: #e9f1f6;
-  }
-  &.caution {
-    border-left: 0px solid #e20000;
-    background-color: #f9ebeb;
-  }
-
-  /*/
