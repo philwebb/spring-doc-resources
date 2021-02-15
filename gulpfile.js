@@ -55,6 +55,11 @@ function addSiteCss() {
         .pipe(dest('build/web/css'));
 }
 
+function addImages() {
+    return src('src/main/img/*')
+        .pipe(dest('build/web/img'));
+}
+
 function addResources() {
     return src('src/main/docinfo/*')
         .pipe(dest('build/dist'));
@@ -84,7 +89,7 @@ function watchFiles(cb) {
     cb();
 }
 
-const update = series(addResources, addHighlightjsJavascript, addSiteCss, renderAsciidoctorExample);
+const update = series(addResources, addHighlightjsJavascript, addSiteCss, addImages, renderAsciidoctorExample);
 
 exports.ad = update
 exports.dev = series(update, parallel(webServer, watchFiles));

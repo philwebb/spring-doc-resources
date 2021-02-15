@@ -203,13 +203,6 @@
   color: var(--asciidoctor-unresolved-link-font-color);
 }
 
-/* Font Awsome */
-
-.book i.fa {
-  hyphens: none;
-  font-style: normal;
-}
-
 /* Code and Pre */
 
 .book p code,
@@ -368,7 +361,7 @@
   word-wrap: anywhere;
 }
 
-.book .admonitionblock .icon {
+.book .admonitionblock td.icon {
   position: absolute;
   top: 0;
   left: 0;
@@ -376,20 +369,45 @@
   padding: 0 0.5rem;
   height: 1.25rem;
   line-height: 1;
-  font-weight: var(--asciidoctor-admonition-label-font-weight);
-  text-transform: uppercase;
   border-radius: 0.45rem;
   transform: translate(-0.5rem, -50%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%) no-repeat left center / 2.075em 100%;
 }
 
-.book .admonitionblock.caution .icon {
+.book .admonitionblock .icon i {
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  background: no-repeat 0.5em 0;
+  filter: invert(100%);
+  padding-left: 2em;
+  vertical-align: initial;
+  hyphens: none;
+}
+
+.book .admonitionblock .icon i::after {
+  content: attr(title);
+  font-weight: var(--asciidoctor-admonition-label-font-weight);
+  text-transform: uppercase;
+}
+
+
+.book .admonitionblock.caution td.icon {
   background-color: var(--asciidoctor-caution-color);
   color: var(--asciidoctor-caution-on-color);
 }
 
-.book .admonitionblock.important .icon {
+.book .admonitionblock.caution td.icon i {
+  background-image: url(../img/octicons-16.svg#view-flame);
+}
+
+.book .admonitionblock.important td.icon {
   background-color: var(--asciidoctor-important-color);
   color: var(--asciidoctor-important-on-color);
+}
+
+.book .admonitionblock.important td.icon i {
+  background-image: url(../img/octicons-16.svg#view-stop);
 }
 
 .book .admonitionblock.note .icon {
@@ -397,9 +415,17 @@
   color: var(--asciidoctor-note-on-color);
 }
 
+.book .admonitionblock.note td.icon i {
+  background-image: url(../img/octicons-16.svg#view-info);
+}
+
 .book .admonitionblock.tip .icon {
   background-color: var(--asciidoctor-tip-color);
   color: var(--asciidoctor-tip-on-color);
+}
+
+.book .admonitionblock.tip td.icon i {
+  background-image: url(../img/octicons-16.svg#view-light-bulb);
 }
 
 .book .admonitionblock.warning .icon {
@@ -407,14 +433,8 @@
   color: var(--asciidoctor-warning-on-color);
 }
 
-.book .admonitionblock .icon i {
-  display: inline-flex;
-  align-items: center;
-  height: 100%;
-}
-
-.book .admonitionblock .icon i::after {
-  content: attr(title);
+.book .admonitionblock.warning td.icon i {
+  background-image: url(../img/octicons-16.svg#view-alert);
 }
 
 /* Images and image blocks */
