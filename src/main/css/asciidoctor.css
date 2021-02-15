@@ -2,7 +2,32 @@
 
 /* Initially Hide the table of contents so we can move it to a different location */
 .book #toc {
-  display: none;
+  /* display: none; */
+}
+
+.book div#toc {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: antiquewhite;
+  height: 100%;
+  overflow: auto;
+  z-index: 1000;
+  width: calc(270 / var(--pixel-to-rem));
+  margin-top: calc(40 / var(--pixel-to-rem));;
+}
+
+
+#header-spring {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(40 / var(--pixel-to-rem));
+  overflow: hidden;
+}
+
+#header-spring h1 svg {
+  height: calc(40 / var(--pixel-to-rem));
 }
 
 /* Container element styling */
