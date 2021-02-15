@@ -366,12 +366,11 @@
   top: 0;
   left: 0;
   font-size: calc(15 / var(--pixel-to-rem));
-  padding: 0 0.5rem;
-  height: 1.25rem;
   line-height: 1;
-  border-radius: 0.45rem;
   transform: translate(-0.5rem, -50%);
   background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%) no-repeat left center / 2.075em 100%;
+  border-radius: 0.45rem;
+  padding: 0.25em 0.075em;
 }
 
 .book .admonitionblock .icon i {
@@ -382,15 +381,18 @@
   filter: invert(100%);
   padding-left: 2em;
   vertical-align: initial;
-  hyphens: none;
 }
 
 .book .admonitionblock .icon i::after {
   content: attr(title);
-  font-weight: var(--asciidoctor-admonition-label-font-weight);
   text-transform: uppercase;
+  filter: invert(100%);
+  font-weight: var(--asciidoctor-admonition-label-font-weight);
+  font-style: normal;
+  hyphens: none;
+  padding: 0 0.5em;
+  margin: -0.05em; /* NOTE account for slight offset in font */
 }
-
 
 .book .admonitionblock.caution td.icon {
   background-color: var(--asciidoctor-caution-color);
