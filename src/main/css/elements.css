@@ -1,11 +1,13 @@
 html {
   height: 100%;
   font-size: var(--html-font-size);
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   overflow-wrap: anywhere;
+  overscroll-behavior: none;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: var(--body-font-color);
   background: var(--body-background);
