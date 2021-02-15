@@ -42,9 +42,12 @@
   --color-spring-dark-green: #6db33f;
 
   --body-font-color: #191e1e;
+  --body-font-dark-color: #141818;
+  --body-font-light-color: #273030;
   --scrollbar-thumb-color: silver;
 
   --color-github-panel: #f6f8fa;
+  --color-github-panel-border: #eaedf0;
 
 }
 
@@ -52,15 +55,16 @@
 
 body.book {
   --asciidoctor-details-background: var(--color-spring-light-blue);
-  --asciidoctor-panel-background: var(--color-smoke-70);
-  --asciidoctor-panel-border-color: var(--color-smoke-90);
+  --asciidoctor-details-font-color: var(--body-font-light-color);
+  --asciidoctor-panel-background: var(--color-github-panel);
+  --asciidoctor-panel-border-color: var(--color-github-panel-border);
   --asciidoctor-margin: 0 auto;
   --asciidoctor-max-width: calc(720 / var(--pixel-to-rem));
-  --asciidoctor-font-color: var(--color-jet-70);
-  --asciidoctor-heading-font-color: var(--color-jet-80);
+  --asciidoctor-font-color: var(--body-font-color);
+  --asciidoctor-heading-font-color: var(--body-font-dark-color);
   --asciidoctor-heading-font-weight: 600;
   --asciidoctor-alt-heading-font-weight: 600;
-  --asciidoctor-section-divider-color: var(--asciidoctor-panel-border-color);
+  --asciidoctor-section-divider-color: var(--color-spring-light-blue);
   --asciidoctor-link-font-color: #1565c0;
   --asciidoctor-hover-link-font-color: #104d92;
   --asciidoctor-unresolved-link-font-color: #d32f2f;
@@ -69,9 +73,10 @@ body.book {
   --asciidoctor-code-data-lang-color: #999;
   --asciidoctor-table-border-color: var(--asciidoctor-panel-border-color);
   --asciidoctor-table-header-footer-background: #ebf2f2;
-  --asciidoctor-table-stripe-background: var(--asciidoctor-panel-background);
+  --asciidoctor-table-stripe-background: var(--color-spring-light-blue);
   --asciidoctor-table-footer-background: linear-gradient(to bottom, var(--color-smoke-70) 0%, white 100%);
-  --asciidoctor-admonition-background: var(--asciidoctor-panel-background);
+  --asciidoctor-admonition-background: var(--color-spring-light-blue);
+  --asciidoctor-admonition-pre-background: var(--color-spring-medium-blue);
   --asciidoctor-admonition-label-font-weight: 500;
   --asciidoctor-caution-color: #a0439c;
   --asciidoctor-caution-on-color: white;
@@ -87,12 +92,12 @@ body.book {
   --asciidoctor-abstract-background: var(--color-smoke-70);
   --asciidoctor-abstract-border-color: var(--asciidoctor-panel-border-color);
   --asciidoctor-abstract-font-color: var(--color-gray-70);
-  --asciidoctor-quote-background: var(--asciidoctor-panel-background);
-  --asciidoctor-quote-attribution-font-color: var(--color-gray-30);
-  --asciidoctor-caption-font-color: var(--color-gray-70);
-  --asciidoctor-caption-font-weight: 500;
-  --asciidoctor-example-background: white;
-  --asciidoctor-example-border-color: var(--color-gray-70);
+  --asciidoctor-quote-background: var(--color-spring-light-blue);
+  --asciidoctor-quote-attribution-font-color: var(--color-spring-dark-green);
+  --asciidoctor-caption-font-color: var(--body-font-light-color);
+  --asciidoctor-caption-font-weight: 400;
+  --asciidoctor-example-background: var(--asciidoctor-panel-background);
+  --asciidoctor-example-border-color: var(--asciidoctor-panel-border-color);
   --asciidoctor-sidebar-background: var(--color-spring-light-blue);
   --asciidoctor-pre-background: var(--asciidoctor-panel-background);
   --asciidoctor-pre-border-color:var(--asciidoctor-panel-border-color);

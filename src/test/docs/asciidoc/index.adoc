@@ -56,6 +56,14 @@ This is an example paragraph.
 [example]
 This is an example paragraph.
 
+.Onomatopoeia
+====
+The book hit the floor with a *thud*.
+
+He could hear doves *cooing* in the pine trees`' branches.
+====
+
+
 === Some Code
 
 How about some code?

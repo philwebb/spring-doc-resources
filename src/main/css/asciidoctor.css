@@ -45,8 +45,10 @@
 
 .book #header .details {
   background: var(--asciidoctor-details-background);
+  color: var(--asciidoctor-details-font-color);
   padding: 1rem 1.5rem;
-  font-weight: 100;
+  font-weight: 600;
+  font-size: 0.8em;
 }
 
 .book #header div.details {
@@ -59,9 +61,10 @@
 }
 
 .book #header .details span.author:after {
-  content: "\22c5";
-  font-weight: 700;
+  content: "\2022";
+  font-weight: 400;
   margin: 0.4em;
+  color: var(--color-spring-dark-green);
 }
 
 #header .details span.author:nth-last-child(2):after {
@@ -227,7 +230,6 @@
   font-size: calc(14 / var(--pixel-to-rem));
   line-height: 1.3;
   margin: 0;
-  border-radius: 6px;
 }
 
 .book pre.highlight code,
@@ -238,7 +240,7 @@
   display: block;
   overflow-x: auto;
   padding: 0.75rem;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 .book pre.highlight code[data-lang]:before {
@@ -348,7 +350,9 @@
 }
 
 .book .admonitionblock pre {
-  font-size: calc(15 / var(--pixel-to-rem));
+  font-size: calc(14 / var(--pixel-to-rem));
+  background: var(--asciidoctor-admonition-pre-background);
+  border: none;
 }
 
 .book .admonitionblock > table {
@@ -604,7 +608,7 @@
 .book .openblock .title,
 .book .tableblock caption {
   color: var(--asciidoctor-caption-font-color);
-  font-size: calc(16 / var(--pixel-to-rem));
+  font-size: calc(14 / var(--pixel-to-rem));
   font-weight: var(--asciidoctor-caption-font-weight);
   font-style: italic;
   hyphens: none;
@@ -622,8 +626,8 @@
 
 .book .exampleblock > .content {
   background: var(--asciidoctor-example-background);
-  border: 0.25rem solid var(--asciidoctor-example-border-color);
-  border-radius: 0.5rem;
+  border: 1px solid var(--asciidoctor-example-border-color);
+  border-radius: 4px; 
   padding: 0.75rem;
 }
 
@@ -635,16 +639,14 @@
 
 .book .sidebarblock {
   background: var(--asciidoctor-sidebar-background);
-  border-radius: 0.75rem;
-  padding: 0.75rem 1.5rem;
+  padding: 2.2rem 2.2rem;
 }
 
 .book .sidebarblock > .content > .title {
-  font-size: calc(22.5 / var(--pixel-to-rem));
+  font-size: calc(23 / var(--pixel-to-rem));
   font-weight: var(--asciidoctor-alt-heading-font-weight);
   line-height: 1.3;
-  margin-bottom: -0.3em;
-  text-align: center;
+  margin-bottom: 1.2rem;
 }
 
 .book .sidebarblock > .content > :not(.title):first-child {
@@ -723,8 +725,6 @@
   white-space: pre-wrap;
   word-break: break-word;
 }
-
-
 
 .book .language-console .hljs-meta {
   user-select: none;

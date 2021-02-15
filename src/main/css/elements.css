@@ -24,7 +24,6 @@ a:active {
   background-color: none;
 }
 
-
 code,
 kbd,
 pre {
@@ -41,4 +40,8 @@ pre {
 table {
   border-collapse: collapse;
   word-wrap: normal;
+}
+
+mark {
+  background: #39FF14;
 }
