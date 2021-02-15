@@ -80,16 +80,16 @@ body.book {
   --asciidoctor-admonition-label-font-weight: 500;
   
 
-  --asciidoctor-caution-color: #802392;
-  --asciidoctor-caution-on-color: white;
-  --asciidoctor-important-color: #e40046;
-  --asciidoctor-important-on-color: white;
-  --asciidoctor-note-color: #0077b9;
-  --asciidoctor-note-on-color: white;
-  --asciidoctor-tip-color: #3f6a22;
-  --asciidoctor-tip-on-color: white;
-  --asciidoctor-warning-color: #d88400;
-  --asciidoctor-warning-on-color: white;
+  --asciidoctor-caution-color: #561164;
+  --asciidoctor-caution-on-color: var(--color-smoke-70);
+  --asciidoctor-important-color: #960000;
+  --asciidoctor-important-on-color: var(--color-smoke-70);
+  --asciidoctor-note-color: #015785;
+  --asciidoctor-note-on-color: var(--color-smoke-70);
+  --asciidoctor-tip-color: #3e6b1f;
+  --asciidoctor-tip-on-color: var(--color-smoke-70);
+  --asciidoctor-warning-color: #bd7400;
+  --asciidoctor-warning-on-color: var(--color-smoke-70);
 
   --asciidoctor-abstract-background: var(--color-smoke-70);
   --asciidoctor-abstract-border-color: var(--asciidoctor-panel-border-color);

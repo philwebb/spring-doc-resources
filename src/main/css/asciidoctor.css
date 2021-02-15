@@ -329,7 +329,7 @@
 /* admonition blocks */
 
 .book .admonitionblock {
-  margin: 1.4rem 0 0;
+  margin: 1.6rem 0 0;
 }
 
 .book .admonitionblock p,
@@ -344,7 +344,6 @@
 
 .book .admonitionblock pre {
   font-size: calc(14 / var(--pixel-to-rem));
-  background: var(--asciidoctor-admonition-pre-background);
   border: none;
 }
 
@@ -386,6 +385,7 @@
 .book .admonitionblock .icon i::after {
   border-left: 1px solid rgba(255, 255, 255, 0.3);
   content: attr(title);
+  text-transform: capitalize;
   filter: invert(100%);
   font-weight: var(--asciidoctor-admonition-label-font-weight);
   font-style: normal;
