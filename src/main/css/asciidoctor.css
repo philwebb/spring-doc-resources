@@ -2,7 +2,7 @@
 
 /* Initially Hide the table of contents so we can move it to a different location */
 .book #toc {
-  /* display: none; */
+   display: none; 
 }
 
 .book div#toc {
