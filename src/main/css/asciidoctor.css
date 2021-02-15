@@ -365,10 +365,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  font-size: calc(15 / var(--pixel-to-rem));
+  font-size: calc(16 / var(--pixel-to-rem));
   line-height: 1;
   transform: translate(-0.5rem, -50%);
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%) no-repeat left center / 2.075em 100%;
   border-radius: 0.45rem;
   padding: 0.25em 0.075em;
 }
@@ -377,6 +376,7 @@
   display: inline-flex;
   align-items: center;
   width: auto;
+  height: 16px;
   background: no-repeat 0.5em 0;
   filter: invert(100%);
   padding-left: 2em;
@@ -384,8 +384,8 @@
 }
 
 .book .admonitionblock .icon i::after {
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
   content: attr(title);
-  text-transform: uppercase;
   filter: invert(100%);
   font-weight: var(--asciidoctor-admonition-label-font-weight);
   font-style: normal;
