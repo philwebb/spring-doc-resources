@@ -7,8 +7,6 @@
   hyphens: auto;
   line-height: 1.6;
   letter-spacing: -.0027777778rem;
-  margin: var(--asciidoctor-margin);
-  max-width: var(--asciidoctor-max-width);
   padding: 0 1rem 4rem;
 }
 

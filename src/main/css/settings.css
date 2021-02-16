@@ -48,8 +48,6 @@ body.book {
   --asciidoctor-details-font-color: var(--body-font-light-color);
   --asciidoctor-panel-background: #f6f8fa;
   --asciidoctor-panel-border-color: #eaedf0;
-  --asciidoctor-margin: 0 auto;
-  --asciidoctor-max-width: calc(720 / var(--pixel-to-rem));
   --asciidoctor-font-color: var(--body-font-color);
   --asciidoctor-heading-font-color: var(--body-font-dark-color);
   --asciidoctor-heading-font-weight: 600;
@@ -94,8 +92,6 @@ body.book {
 
 @media screen and (min-width: 1025px) {
   body.book {
-    --asciidoctor-margin: 0 2rem;
-    --asciidoctor-max-width: calc(828 / var(--pixel-to-rem));
   }
 }
 
