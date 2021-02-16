@@ -1,0 +1,43 @@
+/* Block Swithcing */
+
+.book .switch {
+  font-weight: bold;
+  font-size: calc(12 / var(--pixel-to-rem));
+  border-style: none;
+  display: inline-block;
+  position: relative;
+  bottom: 0;
+  margin-top: 0.5rem;
+  margin-bottom: calc(2 / var(--pixel-to-rem));
+}
+
+.book .switch--item:not(:first-child) {
+  border: 1px solid var(--blockswitch-border-color);
+}
+
+.book .switch--item {
+  padding: 0.3rem 0.6rem;
+  background-color: var(--blockswitch-background-color);
+  color: var(--blockswitch-font-color);
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid var(--blockswitch-border-color);
+  margin-bottom: calc(2 / var(--pixel-to-rem));
+  border-radius: 0;
+}
+
+.book .switch--item:hover {
+  color: var(--blockswitch-hover-font-color);
+  text-decoration: underline;
+}
+
+.book .switch--item.selected {
+  background-color: var(--blockswitch-selected-background-color);
+  border-color:var(--blockswitch-selected-background-color);
+  color: var(--blockswitch-selected-font-color);
+}
+
+.book .switch--item.selected:hover {
+  color: var(--blockswitch-selected-font-color);
+  text-decoration: none;
+}

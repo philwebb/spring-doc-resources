@@ -26,9 +26,12 @@
   --color-spring-medium-blue: #d7e7e7;
   --color-spring-green: #80ea6e;
   --color-spring-dark-green: #6db33f;
+  --body-background-color: white;
   --body-font-color: #191e1e;
   --body-font-light-color: #273030;
   --body-font-dark-color: #141818;
+  --link-font-color: #1565c0;
+  --hover-link-font-color: #104d92;
   --scrollbar-thumb-color: silver;
 }
 
@@ -46,8 +49,8 @@ body.book {
   --asciidoctor-heading-font-weight: 600;
   --asciidoctor-alt-heading-font-weight: 600;
   --asciidoctor-section-divider-color: var(--color-spring-light-blue);
-  --asciidoctor-link-font-color: #1565c0;
-  --asciidoctor-hover-link-font-color: #104d92;
+  --asciidoctor-link-font-color: var(--link-font-color);
+  --asciidoctor-hover-link-font-color:var(--hover-link-font-color);
   --asciidoctor-unresolved-link-font-color: #d32f2f;
   --asciidoctor-code-font-color: var(--asciidoctor-font-color);
   --asciidoctor-code-background: rgba(27, 31, 35, 0.05);
@@ -108,4 +111,13 @@ code.hljs {
   --highlight-addition-font-color: #22863a;
   --highlight-deletion-font-color: #24292e;
   --highlight-regex-font-color: #032f62;
+}
+
+div.switch {
+  --blockswitch-border-color: var(--body-font-light-color);
+  --blockswitch-background-color: var(--body-background-color);
+  --blockswitch-font-color: var(--body-font-color);
+  --blockswitch-selected-background-color: var(--body-font-color);
+  --blockswitch-selected-font-color: var(--body-background-color);
+  --blockswitch-hover-font-color: var(--hover-link-font-color);
 }
