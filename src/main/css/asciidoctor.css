@@ -2,26 +2,19 @@
 
 /* Container element styling */
 
-div#main {
+.doc {
   color: var(--asciidoctor-font-color);
   hyphens: auto;
   line-height: 1.6;
   letter-spacing: -.0027777778rem;
-}
-
-/*
-  FIXME
-
   margin: var(--asciidoctor-margin);
   max-width: var(--asciidoctor-max-width);
   padding: 0 1rem 4rem;
-
-*/
-
+}
 
 /* Header Details */
 
-.book #header .details {
+.doc #header .details {
   background: var(--asciidoctor-details-background);
   color: var(--asciidoctor-details-font-color);
   padding: 1rem 1.5rem;
@@ -29,7 +22,7 @@ div#main {
   font-size: 0.8em;
 }
 
-.book #header div.details {
+.doc #header div.details {
   display: flex;
   flex-wrap: wrap;
 }
@@ -38,7 +31,7 @@ div#main {
   display: none;
 }
 
-.book #header .details span.author:after {
+.doc #header .details span.author:after {
   content: "\2022";
   font-weight: 400;
   margin: 0.4em;
@@ -51,47 +44,47 @@ div#main {
 
 /* Section setup */
 
-.book #preamble + .sect1,
-.book .sect1 + .sect1 {
+.doc #preamble + .sect1,
+.doc .sect1 + .sect1 {
   margin-top: 2rem;
 }
 
-.book .sect1 + .sect1 {
+.doc .sect1 + .sect1 {
   border-top: 1px solid var(--asciidoctor-section-divider-color);
 }
 
 /* Headings */
 
-.book h1 {
+.doc h1 {
   font-size: 2.1em;
 }
 
-.book h2 {
+.doc h2 {
   font-size: 1.7em;
 }
 
-.book h3 {
+.doc h3 {
   font-size: 1.6em;
 }
 
-.book h4 {
+.doc h4 {
   font-size: 1.17em;
 }
 
-.book h5 {
+.doc h5 {
   font-size: 1.00em;
 }
 
-.book h6 {
+.doc h6 {
   font-size: 0.83em;
 }
 
-.book h1,
-.book h2,
-.book h3,
-.book h4,
-.book h5,
-.book h6 {
+.doc h1,
+.doc h2,
+.doc h3,
+.doc h4,
+.doc h5,
+.doc h6 {
   color: var(--asciidoctor-heading-font-color);
   font-weight: var(--asciidoctor-heading-font-weight);
   hyphens: none;
@@ -99,42 +92,39 @@ div#main {
   margin: 1rem 0 0;
 }
 
-.book h3 {
+.doc h3 {
   margin: 2rem 0 0;
 }
 
-.book h1.sect0 {
+.doc h1.sect0 {
   background: var(--asciidoctor-abstract-background);
   font-size: 1.8em;
-  /*
   margin: 1.5rem -1rem 0;
-  padding: 0.5rem 1rem; */
+  padding: 0.5rem 1rem;
 }
 
-.book h1:first-child {
-  /* FIXME
-  margin: 1.5rem 0; */
+.doc h1:first-child {
+  margin: 1.5rem 0; 
 }
 
-.book h2:not(.discrete) {
-  /* FIXME
+.doc h2:not(.discrete) {
   margin-left: -1rem;
-  margin-right: -1rem; */
+  margin-right: -1rem; 
   padding: 0.4rem 1rem 0.1rem;
 }
 
-.book h3:not(.discrete) {
+.doc h3:not(.discrete) {
   font-weight: var(--asciidoctor-alt-heading-font-weight);
 }
 
 /* Header hover anchors */
 
-.book h1 .anchor,
-.book h2 .anchor,
-.book h3 .anchor,
-.book h4 .anchor,
-.book h5 .anchor,
-.book h6 .anchor {
+.doc h1 .anchor,
+.doc h2 .anchor,
+.doc h3 .anchor,
+.doc h4 .anchor,
+.doc h5 .anchor,
+.doc h6 .anchor {
   position: absolute;
   text-decoration: none;
   width: 1.75ex;
@@ -143,51 +133,51 @@ div#main {
   font-weight: normal;
 }
 
-.book h1 .anchor::before,
-.book h2 .anchor::before,
-.book h3 .anchor::before,
-.book h4 .anchor::before,
-.book h5 .anchor::before,
-.book h6 .anchor::before {
+.doc h1 .anchor::before,
+.doc h2 .anchor::before,
+.doc h3 .anchor::before,
+.doc h4 .anchor::before,
+.doc h5 .anchor::before,
+.doc h6 .anchor::before {
   content: "\0023";
 }
 
-.book h1:hover .anchor,
-.book h2:hover .anchor,
-.book h3:hover .anchor,
-.book h4:hover .anchor,
-.book h5:hover .anchor,
-.book h6:hover .anchor {
+.doc h1:hover .anchor,
+.doc h2:hover .anchor,
+.doc h3:hover .anchor,
+.doc h4:hover .anchor,
+.doc h5:hover .anchor,
+.doc h6:hover .anchor {
   visibility: visible;
 }
 
-.book p,
-.book dl {
+.doc p,
+.doc dl {
   margin: 0;
 }
 
 /* General anchors */
 
-.book a.bare {
+.doc a.bare {
   hyphens: none;
 }
 
-.book a {
+.doc a {
   color: var(--asciidoctor-link-font-color);
 }
 
-.book a:hover {
+.doc a:hover {
   color: var(--asciidoctor-hover-link-font-color);
 }
 
-.book a.unresolved {
+.doc a.unresolved {
   color: var(--asciidoctor-unresolved-link-font-color);
 }
 
 /* Code and Pre */
 
-.book p code,
-.book thead code {
+.doc p code,
+.doc thead code {
   color: var(--asciidoctor-code-font-color);
   background: var(--asciidoctor-code-background);
   border-radius: 0.25em;
@@ -195,20 +185,20 @@ div#main {
   padding: 0.125em 0.25em;
 }
 
-.book code,
-.book pre {
+.doc code,
+.doc pre {
   hyphens: none;
 }
 
-.book pre {
+.doc pre {
   font-size: calc(14 / var(--pixel-to-rem));
   line-height: 1.3;
   margin: 0;
 }
 
-.book pre.highlight code,
-.book .listingblock pre:not(.highlight),
-.book .literalblock pre {
+.doc pre.highlight code,
+.doc .listingblock pre:not(.highlight),
+.doc .literalblock pre {
   background: var(--asciidoctor-pre-background);
   box-shadow: inset 0 0 1.75px var(--asciidoctor-pre-border-color);
   display: block;
@@ -217,7 +207,7 @@ div#main {
   border-radius: 4px;
 }
 
-.book pre.highlight code[data-lang]:before {
+.doc pre.highlight code[data-lang]:before {
   content: attr(data-lang);
   text-transform: uppercase;
   display: block;
@@ -229,83 +219,83 @@ div#main {
   color: var(--asciidoctor-code-data-lang-color);
 }
 
-.book pre.highlight {
+.doc pre.highlight {
   position: relative;
 }
 
-.book table pre.highlight code[data-lang]:before {
+.doc table pre.highlight code[data-lang]:before {
   display: none;
 }
 
 
 /* General margin and fonts sizing */
 
-.book blockquote {
+.doc blockquote {
   margin: 0;
 }
 
-.book .paragraph.lead > p {
+.doc .paragraph.lead > p {
   font-size: calc(18 / var(--pixel-to-rem));
 }
 
-.book .paragraph,
-.book .dlist,
-.book .hdlist,
-.book .olist,
-.book .ulist,
-.book .exampleblock,
-.book .imageblock,
-.book .listingblock,
-.book .literalblock,
-.book .sidebarblock,
-.book .verseblock,
-.book .quoteblock,
-.book .partintro,
-.book details,
-.book hr {
+.doc .paragraph,
+.doc .dlist,
+.doc .hdlist,
+.doc .olist,
+.doc .ulist,
+.doc .exampleblock,
+.doc .imageblock,
+.doc .listingblock,
+.doc .literalblock,
+.doc .sidebarblock,
+.doc .verseblock,
+.doc .quoteblock,
+.doc .partintro,
+.doc details,
+.doc hr {
   margin: 0.8rem 0 0;
 }
 
 /* Tables */
 
-.book table.tableblock {
+.doc table.tableblock {
   font-size: calc(15 / var(--pixel-to-rem));
   margin: 1.5rem 0 0;
   display: block;
   overflow-x: auto;
 }
 
-.book table.tableblock + * {
+.doc table.tableblock + * {
   margin-top: 1.5rem;
 }
 
-.book td.tableblock > .content > :first-child {
+.doc td.tableblock > .content > :first-child {
   margin-top: 0;
 }
 
-.book table.tableblock th,
-.book table.tableblock td {
+.doc table.tableblock th,
+.doc table.tableblock td {
   padding: 0.5rem;
 }
 
-.book table.tableblock thead th {
+.doc table.tableblock thead th {
   border-bottom: 2.5px solid var(--asciidoctor-table-border-color);
 }
 
-.book table.tableblock td,
-.book table.tableblock > :not(thead) th {
+.doc table.tableblock td,
+.doc table.tableblock > :not(thead) th {
   border-top: 1px solid var(--asciidoctor-table-border-color);
   border-bottom: 1px solid var(--asciidoctor-table-border-color);
 }
 
-.book table.stripes-all > tbody > tr,
-.book table.stripes-odd > tbody > tr:nth-of-type(odd),
-.book table.stripes-even > tbody > tr:nth-of-type(even),
-.book table.stripes-hover > tbody > tr:hover {
+.doc table.stripes-all > tbody > tr,
+.doc table.stripes-odd > tbody > tr:nth-of-type(odd),
+.doc table.stripes-even > tbody > tr:nth-of-type(even),
+.doc table.stripes-hover > tbody > tr:hover {
   background: var(--asciidoctor-table-stripe-background);
 }
 
-.book table.tableblock > tfoot {
+.doc table.tableblock > tfoot {
   background: var(--asciidoctor-table-footer-background);
 }
 
@@ -317,39 +307,39 @@ div#main {
 
 /* admonition blocks */
 
-.book .admonitionblock {
+.doc .admonitionblock {
   margin: 1.6rem 0 0;
 }
 
-.book .admonitionblock p,
-.book .admonitionblock td.content {
+.doc .admonitionblock p,
+.doc .admonitionblock td.content {
   font-size: calc(16 / var(--pixel-to-rem));
 }
 
-.book .admonitionblock td.content > :not(.title):first-child,
-.book .admonitionblock td.content > .title + * {
+.doc .admonitionblock td.content > :not(.title):first-child,
+.doc .admonitionblock td.content > .title + * {
   margin-top: 0;
 }
 
-.book .admonitionblock pre {
+.doc .admonitionblock pre {
   font-size: calc(14 / var(--pixel-to-rem));
   border: none;
 }
 
-.book .admonitionblock > table {
+.doc .admonitionblock > table {
   table-layout: fixed;
   position: relative;
   width: 100%;
 }
 
-.book .admonitionblock td.content {
+.doc .admonitionblock td.content {
   padding: 1rem 1rem 0.75rem;
   background: var(--asciidoctor-admonition-background);
   width: 100%;
   word-wrap: anywhere;
 }
 
-.book .admonitionblock td.icon {
+.doc .admonitionblock td.icon {
   position: absolute;
   top: 0;
   left: 0;
@@ -360,7 +350,7 @@ div#main {
   padding: 0.25em 0.075em;
 }
 
-.book .admonitionblock .icon i {
+.doc .admonitionblock .icon i {
   display: inline-flex;
   align-items: center;
   width: auto;
@@ -371,7 +361,7 @@ div#main {
   vertical-align: initial;
 }
 
-.book .admonitionblock .icon i::after {
+.doc .admonitionblock .icon i::after {
   border-left: 1px solid rgba(255, 255, 255, 0.3);
   content: attr(title);
   text-transform: capitalize;
@@ -384,234 +374,234 @@ div#main {
   margin: -0.05em; /* NOTE account for slight offset in font */
 }
 
-.book .admonitionblock.caution td.icon {
+.doc .admonitionblock.caution td.icon {
   background: var(--asciidoctor-admonition-caution-background);
 }
 
-.book .admonitionblock.caution td.icon i {
+.doc .admonitionblock.caution td.icon i {
   background-image: url(../img/octicons-16.svg#view-flame);
 }
 
-.book .admonitionblock.important td.icon {
+.doc .admonitionblock.important td.icon {
   background: var(--asciidoctor-admonition-important-background);
 }
 
-.book .admonitionblock.important td.icon i {
+.doc .admonitionblock.important td.icon i {
   background-image: url(../img/octicons-16.svg#view-stop);
 }
 
-.book .admonitionblock.note .icon {
+.doc .admonitionblock.note .icon {
   background: var(--asciidoctor-admonition-note-background);
 }
 
-.book .admonitionblock.note td.icon i {
+.doc .admonitionblock.note td.icon i {
   background-image: url(../img/octicons-16.svg#view-info);
 }
 
-.book .admonitionblock.tip .icon {
+.doc .admonitionblock.tip .icon {
   background: var(--asciidoctor-admonition-tip-background);
 }
 
-.book .admonitionblock.tip td.icon i {
+.doc .admonitionblock.tip td.icon i {
   background-image: url(../img/octicons-16.svg#view-light-bulb);
 }
 
-.book .admonitionblock.warning .icon {
+.doc .admonitionblock.warning .icon {
   background-color: var(--asciidoctor-admonition-warning-background);
 }
 
-.book .admonitionblock.warning td.icon i {
+.doc .admonitionblock.warning td.icon i {
   background-image: url(../img/octicons-16.svg#view-alert);
 }
 
 /* Images and image blocks */
 
-.book .imageblock {
+.doc .imageblock {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.book .imageblock img,
-.book .image > img {
+.doc .imageblock img,
+.doc .image > img {
   display: inline-block;
   height: auto;
   max-width: 100%;
   vertical-align: middle;
 }
 
-.book .image:not(.left):not(.right) > img {
+.doc .image:not(.left):not(.right) > img {
   margin-top: -0.2em;
 }
 
 /* Quote blocks */
 
-.book #preamble .abstract blockquote {
+.doc #preamble .abstract blockquote {
   background: var(--asciidoctor-abstract-background);
   border-left: 5px solid var(--asciidoctor-abstract-border-color);
   font-size: calc(16 / var(--pixel-to-rem));
   padding: 0.75em 1em;
 }
 
-.book .quoteblock,
-.book .verseblock {
+.doc .quoteblock,
+.doc .verseblock {
   background: var(--asciidoctor-quote-background);
   border-left: 5px solid var(--asciidoctor-quote-border-color);
 }
 
-.book .quoteblock {
+.doc .quoteblock {
   padding: 0.25rem 2rem 1.25rem;
 }
 
-.book .quoteblock .attribution {
+.doc .quoteblock .attribution {
   color: var(--asciidoctor-quote-attribution-font-color);
   font-size: calc(15 / var(--pixel-to-rem));
   margin-top: 0.75rem;
 }
 
-.book .quoteblock blockquote {
+.doc .quoteblock blockquote {
   margin-top: 1rem;
 }
 
-.book .quoteblock .paragraph {
+.doc .quoteblock .paragraph {
   font-style: italic;
 }
 
-.book .quoteblock cite {
+.doc .quoteblock cite {
   padding-left: 1em;
 }
 
 /* Verse blocks */
 
-.book .verseblock {
+.doc .verseblock {
   font-size: 1.15em;
   padding: 1rem 2rem;
 }
 
-.book .verseblock pre {
+.doc .verseblock pre {
   font-family: inherit;
   font-size: inherit;
 }
 
 /* Lists */
 
-.book ol,
-.book ul {
+.doc ol,
+.doc ul {
   margin: 0;
   padding: 0 0 0 2rem;
 }
 
-.book ul.checklist,
-.book ul.none,
-.book ol.none,
-.book ul.no-bullet,
-.book ol.unnumbered,
-.book ul.unstyled,
-.book ol.unstyled {
+.doc ul.checklist,
+.doc ul.none,
+.doc ol.none,
+.doc ul.no-bullet,
+.doc ol.unnumbered,
+.doc ul.unstyled,
+.doc ol.unstyled {
   list-style-type: none;
 }
 
-.book ul.no-bullet,
-.book ol.unnumbered {
+.doc ul.no-bullet,
+.doc ol.unnumbered {
   padding-left: 1.25rem;
 }
 
-.book ul.unstyled,
-.book ol.unstyled {
+.doc ul.unstyled,
+.doc ol.unstyled {
   padding-left: 0;
 }
 
-.book ul.circle {
+.doc ul.circle {
   list-style-type: square;
 }
 
-.book ul.disc {
+.doc ul.disc {
   list-style-type: square;
 }
 
-.book ul.square {
+.doc ul.square {
   list-style-type: square;
 }
 
-.book ol.arabic {
+.doc ol.arabic {
   list-style-type: decimal;
 }
 
-.book ol.decimal {
+.doc ol.decimal {
   list-style-type: decimal-leading-zero;
 }
 
-.book ol.loweralpha {
+.doc ol.loweralpha {
   list-style-type: lower-alpha;
 }
 
-.book ol.upperalpha {
+.doc ol.upperalpha {
   list-style-type: upper-alpha;
 }
 
-.book ol.lowerroman {
+.doc ol.lowerroman {
   list-style-type: lower-roman;
 }
 
-.book ol.upperroman {
+.doc ol.upperroman {
   list-style-type: upper-roman;
 }
 
-.book ol.lowergreek {
+.doc ol.lowergreek {
   list-style-type: lower-greek;
 }
 
-.book ul.checklist {
+.doc ul.checklist {
   padding-left: 0.5rem;
 }
 
-.book ul.checklist p > i.fa-check-square-o:first-child,
-.book ul.checklist p > i.fa-square-o:first-child {
+.doc ul.checklist p > i.fa-check-square-o:first-child,
+.doc ul.checklist p > i.fa-square-o:first-child {
   display: inline-flex;
   justify-content: center;
   width: 1.25rem;
 }
 
-.book ul.checklist i.fa-check-square-o::before {
+.doc ul.checklist i.fa-check-square-o::before {
   content: "\2713";
 }
 
-.book ul.checklist i.fa-square-o::before {
+.doc ul.checklist i.fa-square-o::before {
   content: "\274f";
 }
 
-.book .dlist .dlist,
-.book .dlist .olist,
-.book .dlist .ulist,
-.book .olist .dlist,
-.book .olist .olist,
-.book .olist .ulist,
-.book .ulist .dlist,
-.book .ulist .olist,
-.book .ulist .ulist {
+.doc .dlist .dlist,
+.doc .dlist .olist,
+.doc .dlist .ulist,
+.doc .olist .dlist,
+.doc .olist .olist,
+.doc .olist .ulist,
+.doc .ulist .dlist,
+.doc .ulist .olist,
+.doc .ulist .ulist {
   margin-top: 0.5rem;
 }
 
-.book .olist li,
-.book .ulist li {
+.doc .olist li,
+.doc .ulist li {
   margin-bottom: 0.3rem;
 }
 
-.book .ulist .listingblock,
-.book .olist .listingblock,
-.book .admonitionblock .listingblock {
+.doc .ulist .listingblock,
+.doc .olist .listingblock,
+.doc .admonitionblock .listingblock {
   padding: 0;
 }
 
 /* Block Titles */
 
-.book .admonitionblock .title,
-.book .exampleblock .title,
-.book .imageblock .title,
-.book .literalblock .title,
-.book .listingblock .title,
-.book .openblock .title,
-.book .tableblock caption {
+.doc .admonitionblock .title,
+.doc .exampleblock .title,
+.doc .imageblock .title,
+.doc .literalblock .title,
+.doc .listingblock .title,
+.doc .openblock .title,
+.doc .tableblock caption {
   color: var(--asciidoctor-caption-font-color);
   font-size: calc(14 / var(--pixel-to-rem));
   font-weight: var(--asciidoctor-caption-font-weight);
@@ -622,66 +612,66 @@ div#main {
   text-align: left;
 }
 
-.book .imageblock .title {
+.doc .imageblock .title {
   margin-top: 0.5rem;
   padding-bottom: 0;
 }
 
 /* Block content */
 
-.book .exampleblock > .content {
+.doc .exampleblock > .content {
   background: var(--asciidoctor-example-background);
   border: 1px solid var(--asciidoctor-example-border-color);
   border-radius: 4px; 
   padding: 0.75rem;
 }
 
-.book .exampleblock > .content > :first-child {
+.doc .exampleblock > .content > :first-child {
   margin-top: 0;
 }
 
 /* Sidebars */
 
-.book .sidebarblock {
+.doc .sidebarblock {
   background: var(--asciidoctor-sidebar-background);
   padding: 2.2rem 2.2rem;
 }
 
-.book .sidebarblock > .content > .title {
+.doc .sidebarblock > .content > .title {
   font-size: calc(23 / var(--pixel-to-rem));
   font-weight: var(--asciidoctor-alt-heading-font-weight);
   line-height: 1.3;
   margin-bottom: 1.2rem;
 }
 
-.book .sidebarblock > .content > :not(.title):first-child {
+.doc .sidebarblock > .content > :not(.title):first-child {
   margin-top: 0;
 }
 
 /* Buttons (https://docs.asciidoctor.org/asciidoc/latest/macros/ui-macros/#button-macro-syntax) */
 
-.book b.button {
+.doc b.button {
   white-space: nowrap;
 }
 
-.book b.button::before {
+.doc b.button::before {
   content: "[";
   padding-right: 0.25em;
 }
 
-.book b.button::after {
+.doc b.button::after {
   content: "]";
   padding-left: 0.25em;
 }
 
 /* Menu (https://docs.asciidoctor.org/asciidoc/latest/macros/ui-macros/#menu-macro-syntax) */
 
-.book .menuseq,
-.book .path {
+.doc .menuseq,
+.doc .path {
   hyphens: none;
 }
 
-.book .menuseq i.caret::before {
+.doc .menuseq i.caret::before {
   content: "\203a";
   font-size: 1.1em;
   font-weight: var(--asciidoctor-body-font-weight-bold);
@@ -690,7 +680,7 @@ div#main {
 
 /* Keyboard (https://docs.asciidoctor.org/asciidoc/latest/macros/keyboard-macro/) */
 
-.book kbd {
+.doc kbd {
   display: inline-block;
   font-size: calc(12 / var(--pixel-to-rem));
   background: var(--asciidoctor-kbd-background);
@@ -702,82 +692,82 @@ div#main {
   white-space: nowrap; 
 }
 
-.book kbd,
-.book .keyseq {
+.doc kbd,
+.doc .keyseq {
   line-height: 1;
 }
 
-.book .keyseq {
+.doc .keyseq {
   font-size: calc(16 / var(--pixel-to-rem));
 }
 
-.book .keyseq kbd {
+.doc .keyseq kbd {
   margin: 0 0.125em;
 }
 
-.book .keyseq kbd:first-child {
+.doc .keyseq kbd:first-child {
   margin-left: 0;
 }
 
-.book .keyseq kbd:last-child {
+.doc .keyseq kbd:last-child {
   margin-right: 0;
 }
 
 /* Misc */
 
-.book .language-console .hljs-meta {
+.doc .language-console .hljs-meta {
   user-select: none;
 }
 
-.book .dlist dt {
+.doc .dlist dt {
   font-style: italic;
 }
 
-.book .dlist dd {
+.doc .dlist dd {
   margin: 0 0 0.25rem 1.5rem;
 }
 
-.book .dlist dd:last-of-type {
+.doc .dlist dd:last-of-type {
   margin-bottom: 0;
 }
 
-.book  td.hdlist1,
-.book td.hdlist2 {
+.doc  td.hdlist1,
+.doc td.hdlist2 {
   padding: 0.5rem 0 0;
   vertical-align: top;
 }
 
-.book tr:first-child > .hdlist1,
-.book tr:first-child > .hdlist2 {
+.doc tr:first-child > .hdlist1,
+.doc tr:first-child > .hdlist2 {
   padding-top: 0;
 }
 
-.book td.hdlist1 {
+.doc td.hdlist1 {
   font-weight: var(--body-font-weight-bold);
   padding-right: 0.25rem;
 }
 
-.book td.hdlist2 {
+.doc td.hdlist2 {
   padding-left: 0.25rem;
 }
 
-.book .colist {
+.doc .colist {
   font-size: calc(16 / var(--pixel-to-rem));
   margin: 0.25rem 0 -0.25rem;
 }
 
-.book .colist > table > tr > :first-child,
-.book .colist > table > tbody > tr > :first-child {
+.doc .colist > table > tr > :first-child,
+.doc .colist > table > tbody > tr > :first-child {
   padding: 0.25em 0.5rem 0;
   vertical-align: top;
 }
 
-.book .colist > table > tr > :last-child,
-.book .colist > table > tbody > tr > :last-child {
+.doc .colist > table > tr > :last-child,
+.doc .colist > table > tbody > tr > :last-child {
   padding: 0.25rem 0;
 }
 
-.book .conum[data-value] {
+.doc .conum[data-value] {
   /* border: 1px solid currentColor; */
   font-family: var(--monospace-font-family);
   border-radius: 100%;
@@ -794,15 +784,15 @@ div#main {
   color: var(--asciidoctor-callout-font-color);
 }
 
-.book .conum[data-value]::after {
+.doc .conum[data-value]::after {
   content: attr(data-value);
 }
 
-.book .conum[data-value] + b {
+.doc .conum[data-value] + b {
   display: none;
 }
 
-.book hr {
+.doc hr {
   border: solid var(--asciidoctor-section-divider-color);
   border-width: 2px 0 0;
   height: 0;
@@ -810,55 +800,55 @@ div#main {
 
 /* Pass-though Classes */
 
-.book .nowrap {
+.doc .nowrap {
   white-space: nowrap;
 }
 
-.book .nobreak {
+.doc .nobreak {
   hyphens: none;
   word-wrap: normal;
 }
 
-.book .right {
+.doc .right {
   float: right;
 }
 
-.book .left {
+.doc .left {
   float: left;
 }
 
-.book .stretch {
+.doc .stretch {
   width: 100%;
 }
 
-.book .underline {
+.doc .underline {
   text-decoration: underline;
 }
 
-.book .line-through {
+.doc .line-through {
   text-decoration: line-through;
 }
 
-.book .halign-left {
+.doc .halign-left {
   text-align: left;
 }
 
-.book .halign-right {
+.doc .halign-right {
   text-align: right;
 }
 
-.book .halign-center {
+.doc .halign-center {
   text-align: center;
 }
 
-.book .valign-top {
+.doc .valign-top {
   vertical-align: top;
 }
 
-.book .valign-bottom {
+.doc .valign-bottom {
   vertical-align: bottom;
 }
 
-.book .valign-middle {
+.doc .valign-middle {
   vertical-align: middle;
 }
