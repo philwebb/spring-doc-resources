@@ -290,6 +290,8 @@
 .book table.tableblock {
   font-size: calc(15 / var(--pixel-to-rem));
   margin: 1.5rem 0 0;
+  display: block;
+  overflow-x: auto;
 }
 
 .book table.tableblock + * {
@@ -324,6 +326,12 @@
 
 .book table.tableblock > tfoot {
   background: var(--asciidoctor-table-footer-background);
+}
+
+.doc .tableblock pre,
+.doc .tableblock code,
+.doc .listingblock.wrap pre {
+  word-wrap: break-word;
 }
 
 /* admonition blocks */
@@ -735,12 +743,6 @@
 }
 
 /* Misc */
-
-.book .tableblock pre,
-.book .tableblock p {
-  white-space: pre-wrap;
-  word-break: break-word;
-}
 
 .book .language-console .hljs-meta {
   user-select: none;

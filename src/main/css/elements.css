@@ -2,6 +2,7 @@ html {
   height: 100%;
   font-size: var(--html-font-size);
   scroll-behavior: smooth;
+  min-width: 340px;
 }
 
 body {
@@ -10,7 +11,7 @@ body {
   overscroll-behavior: none;
   font-family: var(--font-family);
   color: var(--body-font-color);
-  background: var(--body-background);
+  background-color: var(--body-background-color);
   letter-spacing: -.0027777778rem;
 } 
 
