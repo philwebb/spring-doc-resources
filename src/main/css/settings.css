@@ -35,6 +35,12 @@
   --scrollbar-thumb-color: silver;
 }
 
+/* Page */
+
+:root {
+  --border-color: var(--color-spring-medium-blue)
+}
+
 /* Asciidoctor */
 
 body.book {

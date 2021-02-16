@@ -17,19 +17,6 @@
   margin-top: calc(40 / var(--pixel-to-rem));;
 }
 
-
-#header-spring {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: calc(40 / var(--pixel-to-rem));
-  overflow: hidden;
-}
-
-#header-spring h1 svg {
-  height: calc(40 / var(--pixel-to-rem));
-}
-
 /* Container element styling */
 
 .book {

@@ -1,0 +1,6 @@
+#header-spring {
+  width: 100%;
+  height: calc(60 / var(--pixel-to-rem));
+  overflow-y: hidden;
+  border-bottom: 1px solid var(--border-color);
+}
