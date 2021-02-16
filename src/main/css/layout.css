@@ -1,6 +1,37 @@
-#header-spring {
+#banner {
   width: 100%;
   height: calc(60 / var(--pixel-to-rem));
   overflow-y: hidden;
   border-bottom: 1px solid var(--border-color);
 }
+
+#navbar {
+  display: none;
+}
+
+#toc {
+  top: calc(60 / var(--pixel-to-rem));
+  left: 0;
+  position: absolute;
+  z-index: 1000;
+  width: calc(200 / var(--pixel-to-rem));
+}
+
+#main {
+  margin-left: calc(200 / var(--pixel-to-rem));
+  border-left: 1px solid var(--border-color);
+  overflow: auto;
+}
+
+
+/* .book div#toc {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: antiquewhite;
+  height: 100%;
+  overflow: auto;
+  z-index: 1000;
+  width: calc(270 / var(--pixel-to-rem));
+  margin-top: calc(40 / var(--pixel-to-rem));;
+} */

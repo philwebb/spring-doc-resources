@@ -1,32 +1,23 @@
 /* Asciidoctor styling based on https://gitlab.com/antora/antora-ui-default */
 
-/* Initially Hide the table of contents so we can move it to a different location */
-.book #toc {
-   display: none; 
-}
-
-.book div#toc {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: antiquewhite;
-  height: 100%;
-  overflow: auto;
-  z-index: 1000;
-  width: calc(270 / var(--pixel-to-rem));
-  margin-top: calc(40 / var(--pixel-to-rem));;
-}
-
 /* Container element styling */
 
-.book {
+div#main {
   color: var(--asciidoctor-font-color);
   hyphens: auto;
   line-height: 1.6;
+  letter-spacing: -.0027777778rem;
+}
+
+/*
+  FIXME
+
   margin: var(--asciidoctor-margin);
   max-width: var(--asciidoctor-max-width);
   padding: 0 1rem 4rem;
-}
+
+*/
+
 
 /* Header Details */
 
@@ -115,17 +106,20 @@
 .book h1.sect0 {
   background: var(--asciidoctor-abstract-background);
   font-size: 1.8em;
+  /*
   margin: 1.5rem -1rem 0;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1rem; */
 }
 
 .book h1:first-child {
-  margin: 1.5rem 0;
+  /* FIXME
+  margin: 1.5rem 0; */
 }
 
 .book h2:not(.discrete) {
+  /* FIXME
   margin-left: -1rem;
-  margin-right: -1rem;
+  margin-right: -1rem; */
   padding: 0.4rem 1rem 0.1rem;
 }
 
