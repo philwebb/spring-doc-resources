@@ -9,16 +9,18 @@
   letter-spacing: -.0027777778rem;
 }
 
+/* Gutter and margins */
 
 .doc #content,
-.doc #header > *:not(#toc) {
+.doc #header > *:not(#toc), 
+.doc #footer {
+  /* Gutter is not applied directly to #header of toc positioning */
   margin-left: 2rem;
 }
 
 .doc #content {
   padding-bottom: 4rem;
 }
-
 
 /* Header Details */
 
