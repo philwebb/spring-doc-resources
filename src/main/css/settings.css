@@ -1,25 +1,8 @@
-/* Baseline */
+/* General */
 
 :root {
   --html-font-size: 1em;
   --pixel-to-rem: 16 * 1rem;
-}
-
-/*  Desktop */
-
-@media screen and (min-width: 1025px) {
-  :root {
-  }
-}
-
-/*  Printing */
-
-@media print {
-  :root {
-  }
-}
-
-:root {
   --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --monospace-font-family: "SFMono-Regular","Consolas","Liberation Mono","Menlo","monospace";
   --color-spring-light-blue: #ebf2f2;
@@ -38,7 +21,24 @@
 /* Layout */
 
 :root {
-  --border-color: var(--color-spring-medium-blue)
+  --layout-max-width: 1400px;
+  --layout-toc-width: 24rem;
+  --layout-banner-height: 80px;
+  --layout-border-color: #ebf2f2;
+  --layout-toc-display: block;
+}
+
+@media screen and (max-width: 1024px) {
+  :root {
+    --layout-toc-width: 16rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  :root {
+    --layout-toc-width: 0;
+    --layout-toc-display: none;
+  }
 }
 
 /* Asciidoctor */
@@ -75,7 +75,7 @@ body.book {
   --asciidoctor-abstract-background: var(--asciidoctor-panel-background);
   --asciidoctor-abstract-border-color: var(--asciidoctor-panel-border-color);
   --asciidoctor-quote-background: var(--color-spring-light-blue);
-  --asciidoctor-quote-border-color: var(--asciidoctor-panel-border-color);
+  --asciidoctor-quote-border-color: var(--color-spring-dark-green);
   --asciidoctor-quote-attribution-font-color: var(--color-spring-dark-green);
   --asciidoctor-caption-font-color: var(--body-font-light-color);
   --asciidoctor-caption-font-weight: 400;
@@ -86,13 +86,7 @@ body.book {
   --asciidoctor-pre-border-color: var(--asciidoctor-panel-border-color);
   --asciidoctor-callout-background: var(--body-font-light-color);
   --asciidoctor-callout-font-color: #f0f0f0;
-}
-
-/* Asciidoctor Desktop */
-
-@media screen and (min-width: 1025px) {
-  body.book {
-  }
+  --asciidoctor-footer-font-color: rgb(182, 182, 182);
 }
 
 /* Highlight JS (colors based on https://github.com/primer/github-syntax-light) */
@@ -114,6 +108,8 @@ code.hljs {
   --highlight-deletion-font-color: #24292e;
   --highlight-regex-font-color: #032f62;
 }
+
+/* Block Switch */
 
 div.switch {
   --blockswitch-border-color: var(--body-font-light-color);

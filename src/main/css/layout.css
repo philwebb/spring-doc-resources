@@ -1,17 +1,11 @@
-:root {
-  --layout-max-width: 1000px;
-  --layout-toc-width: 300px;
-  --layout-banner-height: 40px;
-}
-
 #banner-container {
   height: var(--layout-banner-height);
   overflow: hidden;
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid var(--layout-border-color);
 }
 
 #doc {
-  border-left: 1px solid red;
+  border-left: 1px solid var(--layout-border-color);
   overflow: auto;
   margin-left: var(--layout-toc-width);
 }
@@ -26,11 +20,11 @@
 }
 
 #toc {
+  display: var(--layout-toc-display);
   position: absolute;
   top: var(--layout-banner-height);
   width: var(--layout-toc-width);
   margin-left: calc(var(--layout-toc-width) * -1);
-  background-color: antiquewhite;
-  border-right: 1px solid red;
+  border-right: 1px solid var(--layout-border-color);
   padding-top: 1.3rem;
 }

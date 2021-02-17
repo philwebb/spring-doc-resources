@@ -7,15 +7,20 @@
   hyphens: auto;
   line-height: 1.6;
   letter-spacing: -.0027777778rem;
+  margin: 0;
 }
 
 /* Gutter and margins */
 
 .doc #content,
-.doc #header > *:not(#toc), 
 .doc #footer {
+  margin: 0 2rem;
+}
+
+.doc #header > *:not(#toc) {
   /* Gutter is not applied directly to #header of toc positioning */
   margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .doc #content {
@@ -859,4 +864,13 @@
 
 .doc .valign-middle {
   vertical-align: middle;
+}
+
+/* Footer */
+
+#footer #footer-text {
+  font-size: calc(14 / var(--pixel-to-rem));
+  color: var(--asciidoctor-footer-font-color);
+  padding: 2rem 0;
+  border-top: 1px solid var(--asciidoctor-section-divider-color);
 }
