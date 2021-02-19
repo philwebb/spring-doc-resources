@@ -27,6 +27,21 @@
   padding-bottom: 4rem;
 }
 
+/* Spring Header Image */
+
+#doc {
+  background-image: url(../img/spring-shape.svg);
+  background-repeat: no-repeat;
+  background-size: 203px 95px;
+  background-size: 305px 147px;
+  background-position: top right;
+}
+
+.doc #header {
+  background-color: rebeccapurple;
+  margin-right: 203px;
+}
+
 /* Header Details */
 
 .doc #header .details {
@@ -314,8 +329,10 @@
 
 .doc .tableblock pre,
 .doc .tableblock code,
+.doc .tableblock p,
 .doc .listingblock.wrap pre {
-  word-wrap: break-word;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
 }
 
 /* admonition blocks */
