@@ -1,6 +1,5 @@
-/* General */
-
 :root {
+  /* General */
   --html-font-size: 1em;
   --pixel-to-rem: 16 * 1rem;
   --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -15,21 +14,13 @@
   --link-font-color: #1565c0;
   --hover-link-font-color: #104d92;
   --scrollbar-thumb-color: silver;
-}
 
-/* Layout */
-
-:root {
+  /* Layout */
   --layout-max-width: 1400px;
-  --layout-toc-width: 24rem;
   --layout-banner-height: 80px;
   --layout-border-color: #ebf2f2;
-  --layout-toc-display: block;
-}
 
-/* Asciidoctor */
-
-body.book {
+  /* Asciidoctor */
   --asciidoctor-doc-embellishment-background: url(../img/doc-background.svg) no-repeat top right / 305px 147px;
   --asciidoctor-doc-embellishment-margin-width: 250px;
   --asciidoctor-doc-background-embellishment-height: 147px;
@@ -76,11 +67,8 @@ body.book {
   --asciidoctor-callout-background: var(--body-font-light-color);
   --asciidoctor-callout-font-color: #f0f0f0;
   --asciidoctor-footer-font-color: rgb(182, 182, 182);
-}
 
-/* Highlight JS (colors based on https://github.com/primer/github-syntax-light) */
-
-code.hljs {
+  /* Highlight JS (colors based on https://github.com/primer/github-syntax-light) */
   --highlight-background-color: var(--asciidoctor-pre-background);
   --highlight-font-color: #24292e;
   --highlight-keyword-font-color: #d73a49;
@@ -96,26 +84,28 @@ code.hljs {
   --highlight-addition-font-color: #22863a;
   --highlight-deletion-font-color: #24292e;
   --highlight-regex-font-color: #032f62;
-}
 
-/* Block Switch */
-
-div.switch {
+  /* Block Switch */
   --blockswitch-border-color: var(--body-font-light-color);
   --blockswitch-background-color: var(--body-background-color);
   --blockswitch-font-color: var(--body-font-color);
   --blockswitch-selected-background-color: var(--body-font-color);
   --blockswitch-selected-font-color: var(--body-background-color);
   --blockswitch-hover-font-color: var(--hover-link-font-color);
+
+  /* TOC */
+  --toc-width: 24rem;
+  --toc-display: block;
+  --toc-font-color: var(--body-font-color);
+  --toc-hover-background-color: var(--color-spring-light-blue);
 }
+
 
 /* Responsive Overrides */
 
 @media screen and (max-width: 1024px) {
   :root {
-    --layout-toc-width: 16rem;
-  }
-  body.book {
+    --toc-width: 16rem;
     --asciidoctor-doc-embellishment-background: url(../img/doc-background.svg) no-repeat top right / 203px 95px;
     --asciidoctor-doc-embellishment-margin-width: 140px;
   }
@@ -123,10 +113,8 @@ div.switch {
 
 @media screen and (max-width: 800px) {
   :root {
-    --layout-toc-width: 0;
-    --layout-toc-display: none;
-  }
-  body.book {
+    --toc-width: 0;
+    --toc-display: none;
     --asciidoctor-doc-embellishment-background: none;
     --asciidoctor-doc-embellishment-margin-width: 0;
   }

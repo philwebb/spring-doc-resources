@@ -10,9 +10,7 @@
 }
 
 #doc {
-  border-left: 1px solid var(--layout-border-color);
   overflow: auto;
-  margin-left: var(--layout-toc-width);
 }
 
 .contained {

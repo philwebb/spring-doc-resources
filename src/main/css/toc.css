@@ -1,10 +1,15 @@
+#doc {
+    border-left: 1px solid var(--layout-border-color);
+    overflow: auto;
+    margin-left: var(--toc-width);
+}
+  
 #toc {
-    /* FIXME rename --layout-toc */
-    display: var(--layout-toc-display);
+    display: var(--toc-display);
     position: absolute;
     top: var(--layout-banner-height);
-    width: var(--layout-toc-width);
-    margin-left: calc(var(--layout-toc-width) * -1);
+    width: var(--toc-width);
+    margin-left: calc(var(--toc-width) * -1);
     border-right: 1px solid var(--layout-border-color);
     padding: 1.7rem 1rem 0 1rem;
     font-size: 0.95rem;
@@ -31,11 +36,11 @@
 #toc a {
     display: block;
     text-decoration: none;
-    color: var(--body-font-color);
+    color: var(--toc-font-color);
     padding: 0.4rem 0.6rem;
     border-radius: 4px;
 }
 
 #toc a:hover {
-    background-color: var(--color-spring-light-blue);
+    background-color: var(--toc-hover-background-color);
 }
