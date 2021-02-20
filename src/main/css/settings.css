@@ -28,22 +28,12 @@
   --layout-toc-display: block;
 }
 
-@media screen and (max-width: 1024px) {
-  :root {
-    --layout-toc-width: 16rem;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  :root {
-    --layout-toc-width: 0;
-    --layout-toc-display: none;
-  }
-}
-
 /* Asciidoctor */
 
 body.book {
+  --asciidoctor-doc-embellishment-background: url(../img/doc-background.svg) no-repeat top right / 305px 147px;
+  --asciidoctor-doc-embellishment-margin-width: 250px;
+  --asciidoctor-doc-background-embellishment-height: 147px;
   --asciidoctor-details-background: var(--color-spring-light-blue);
   --asciidoctor-details-font-color: var(--body-font-light-color);
   --asciidoctor-panel-background: #f6f8fa;
@@ -119,3 +109,27 @@ div.switch {
   --blockswitch-selected-font-color: var(--body-background-color);
   --blockswitch-hover-font-color: var(--hover-link-font-color);
 }
+
+/* Responsive Overrides */
+
+@media screen and (max-width: 1024px) {
+  :root {
+    --layout-toc-width: 16rem;
+  }
+  body.book {
+    --asciidoctor-doc-embellishment-background: url(../img/doc-background.svg) no-repeat top right / 203px 95px;
+    --asciidoctor-doc-embellishment-margin-width: 140px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  :root {
+    --layout-toc-width: 0;
+    --layout-toc-display: none;
+  }
+  body.book {
+    --asciidoctor-doc-embellishment-background: none;
+    --asciidoctor-doc-embellishment-margin-width: 0;
+  }
+}
+

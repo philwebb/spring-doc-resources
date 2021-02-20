@@ -4,6 +4,11 @@
   border-bottom: 1px solid var(--layout-border-color);
 }
 
+#banner {
+  height: 100%;
+  background: url(../img/banner-logo.svg) no-repeat top left / 100px 100px;
+}
+
 #doc {
   border-left: 1px solid var(--layout-border-color);
   overflow: auto;

@@ -27,19 +27,14 @@
   padding-bottom: 4rem;
 }
 
-/* Spring Header Image */
+/* Doc background embellishment */
 
 #doc {
-  background-image: url(../img/spring-shape.svg);
-  background-repeat: no-repeat;
-  background-size: 203px 95px;
-  background-size: 305px 147px;
-  background-position: top right;
+  background: var(--asciidoctor-doc-embellishment-background);
 }
 
 .doc #header {
-  background-color: rebeccapurple;
-  margin-right: 203px;
+  margin-right: var(--asciidoctor-doc-embellishment-margin-width);
 }
 
 /* Header Details */
