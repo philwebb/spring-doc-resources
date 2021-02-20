@@ -60,7 +60,7 @@
   content: "\2022";
   font-weight: 400;
   margin: 0.4em;
-  color: var(--color-spring-dark-green);
+  color: var(--color-spring-green);
 }
 
 #header .details span.author:nth-last-child(2):after {

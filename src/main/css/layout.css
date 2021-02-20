@@ -24,12 +24,3 @@
   display: none;
 }
 
-#toc {
-  display: var(--layout-toc-display);
-  position: absolute;
-  top: var(--layout-banner-height);
-  width: var(--layout-toc-width);
-  margin-left: calc(var(--layout-toc-width) * -1);
-  border-right: 1px solid var(--layout-border-color);
-  padding-top: 1.3rem;
-}
