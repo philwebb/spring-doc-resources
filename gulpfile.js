@@ -50,8 +50,10 @@ function addHighlightjsJavascript() {
 }
 
 function addSiteCss() {
-    return src('src/main/css/spring.css', {sourcemaps})
+    return src(['src/main/css/spring.css', 'src/main/css/font-awesome.css'])
+        .pipe(sourcemaps.init())
         .pipe(postcss())
+        .pipe(sourcemaps.write('./'))
         .pipe(dest('build/web/css'));
 }
 

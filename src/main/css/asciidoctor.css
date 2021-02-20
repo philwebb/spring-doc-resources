@@ -252,7 +252,6 @@
   display: none;
 }
 
-
 /* General margin and fonts sizing */
 
 .doc blockquote {
@@ -330,7 +329,7 @@
   overflow-wrap: anywhere;
 }
 
-/* admonition blocks */
+/* Admonition blocks */
 
 .doc .admonitionblock {
   margin: 1.6rem 0 0;
@@ -380,7 +379,8 @@
   align-items: center;
   width: auto;
   height: 16px;
-  background: no-repeat 0.5em 0;
+  background-repeat: no-repeat;
+  background-position: 0.5em 0;
   filter: invert(100%);
   padding-left: 2em;
   vertical-align: initial;
@@ -396,47 +396,27 @@
   font-style: normal;
   hyphens: none;
   padding: 0 0.5em;
-  margin: -0.05em; /* NOTE account for slight offset in font */
+  margin: -0.05em;
 }
 
 .doc .admonitionblock.caution td.icon {
   background: var(--asciidoctor-admonition-caution-background);
 }
 
-.doc .admonitionblock.caution td.icon i {
-  background-image: url(../img/octicons-16.svg#view-flame);
-}
-
 .doc .admonitionblock.important td.icon {
   background: var(--asciidoctor-admonition-important-background);
-}
-
-.doc .admonitionblock.important td.icon i {
-  background-image: url(../img/octicons-16.svg#view-stop);
 }
 
 .doc .admonitionblock.note .icon {
   background: var(--asciidoctor-admonition-note-background);
 }
 
-.doc .admonitionblock.note td.icon i {
-  background-image: url(../img/octicons-16.svg#view-info);
-}
-
 .doc .admonitionblock.tip .icon {
   background: var(--asciidoctor-admonition-tip-background);
 }
 
-.doc .admonitionblock.tip td.icon i {
-  background-image: url(../img/octicons-16.svg#view-light-bulb);
-}
-
 .doc .admonitionblock.warning .icon {
   background-color: var(--asciidoctor-admonition-warning-background);
-}
-
-.doc .admonitionblock.warning td.icon i {
-  background-image: url(../img/octicons-16.svg#view-alert);
 }
 
 /* Images and image blocks */
@@ -739,6 +719,11 @@
 }
 
 /* Misc */
+
+.doc i.fa {
+  hyphens: none;
+  font-style: normal;
+}
 
 .doc .language-console .hljs-meta {
   user-select: none;

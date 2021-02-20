@@ -1,7 +1,11 @@
 'use strict'
 
 module.exports = {
-    plugins: {
-      'postcss-import': {}
+  plugins: {
+    'postcss-import': {
+    },
+    'cssnano': {
+      preset: 'default',
     }
   }
+}

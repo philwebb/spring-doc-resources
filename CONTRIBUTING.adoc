@@ -1,0 +1,21 @@
+/*
+
+CSS is organized using ITCSS
+
+______________
+\____________/  Settings
+ \__________/   Tools
+  \________/    Generic
+   \______/     Elements
+    \____/      Objects
+     \__/       Components
+      \/        Utilities
+
+*/
+
+
+/* 
+
+Minimal Font Awesome 4.0 compatible CSS rendered using octicons 
+
+*/
