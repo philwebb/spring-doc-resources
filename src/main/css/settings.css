@@ -7,8 +7,7 @@
   --monospace-font-family: "SFMono-Regular","Consolas","Liberation Mono","Menlo","monospace";
   --color-spring-light-blue: #ebf2f2;
   --color-spring-medium-blue: #d7e7e7;
-  --color-spring-green: #80ea6e;
-  --color-spring-dark-green: #6db33f;
+  --color-spring-green: #6db33f;
   --body-background-color: white;
   --body-font-color: #191e1e;
   --body-font-light-color: #273030;
@@ -65,8 +64,8 @@ body.book {
   --asciidoctor-abstract-background: var(--asciidoctor-panel-background);
   --asciidoctor-abstract-border-color: var(--asciidoctor-panel-border-color);
   --asciidoctor-quote-background: var(--color-spring-light-blue);
-  --asciidoctor-quote-border-color: var(--color-spring-dark-green);
-  --asciidoctor-quote-attribution-font-color: var(--color-spring-dark-green);
+  --asciidoctor-quote-border-color: var(--color-spring-green);
+  --asciidoctor-quote-attribution-font-color: var(--color-spring-green);
   --asciidoctor-caption-font-color: var(--body-font-light-color);
   --asciidoctor-caption-font-weight: 400;
   --asciidoctor-example-background: var(--asciidoctor-panel-background);
